@@ -40,7 +40,7 @@ const GlobalProvider = ({ children }: any) => {
    */
   const handleLoginState = async () => {
     try {
-      const url = "http://localhost:3000/api/customAuth/validate";
+      const url = `${import.meta.env.VITE_BACKEND_URL}/api/customAuth/validate`;
       const response = await axios.get(url, { withCredentials: true });
       const id = (response?.data as any)?.customerId;
       
@@ -100,13 +100,12 @@ const GlobalProvider = ({ children }: any) => {
   useEffect(() => {
     const fetchCartData = async () => {
       try {
-        const url = `http://localhost:3000/api/userCartData?customerId=${customerId}`;
+        const url = `${import.meta.env.VITE_BACKEND_URL}/api/userCartData?customerId=${customerId}`;
         const response = await axios.get<{ data: CartItem[] }>(url, {
           withCredentials: true,
         });
 
         setCartDetails(response?.data?.data);
-        // console.log("🛒 Cart loaded:", response?.data?.data);
       } catch (error) {
         console.log("Failed to load cart", error);
       }

@@ -107,7 +107,7 @@ const Payment = () => {
     // }
 
     // ✅ Proceed to create new order and payment
-    const createOrderUrl = "http://localhost:3000/api/razorpay/create-order";
+    const createOrderUrl = `${import.meta.env.VITE_BACKEND_URL}/api/razorpay/create-order`;
     const result = await axios.post(createOrderUrl, { amount: totalAmount });
     const data: any = result.data;
 
@@ -120,7 +120,7 @@ const Payment = () => {
       order_id: data.id,
       handler: async function (response: any) {
         try {
-          const verifyUrl = "http://localhost:3000/api/razorpay/verify";
+          const verifyUrl = `${import.meta.env.VITE_BACKEND_URL}/api/razorpay/verify`;
           const verifyRes = await axios.post(verifyUrl, response);
           const verifyData: any = verifyRes.data;
 
@@ -180,7 +180,7 @@ const Payment = () => {
 
       console.log("Placing Order:", orderPayload);
 
-      const url = "http://localhost:3000/api/createOrder";
+      const url = `${import.meta.env.VITE_BACKEND_URL}/api/createOrder`;
       const responseOrder = await axios.post(url, orderPayload, {
         withCredentials: true, // ensure cookies/session sent
       });

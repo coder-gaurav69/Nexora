@@ -34,7 +34,7 @@ const Product = ({
 
 const handleAddToCart = async () => {
   try {
-    const url = "http://localhost:3000/api/add-cart-product";
+    const url = `${import.meta.env.VITE_BACKEND_URL}/api/add-cart-product`;
 
     const payload = {
       customerId,

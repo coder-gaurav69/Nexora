@@ -48,7 +48,7 @@ const ProductPage = () => {
   useEffect(() => {
     const productList = async () => {
       try {
-        const url = `http://localhost:3000/api/products`;
+        const url = `${import.meta.env.VITE_BACKEND_URL}/api/products`;
         const response = await axios.get<{ data: ProductType[] }>(url, {
           withCredentials: true,
         });
@@ -110,7 +110,7 @@ const ProductPage = () => {
 
   const handleAddToCart = async (val:boolean) => {
     try {
-      const url = "http://localhost:3000/api/add-cart-product";
+      const url = `${import.meta.env.VITE_BACKEND_URL}/api/add-cart-product`;
       const payload = {
         customerId,
         productId: product?._id,

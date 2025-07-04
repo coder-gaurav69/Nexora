@@ -58,7 +58,7 @@ const Auth = () => {
 
   const handleSubmitForm = async () => {
     try {
-      const url = `http://localhost:3000/api/customAuth/${
+      const url = `${import.meta.env.VITE_BACKEND_URL}/api/customAuth/${
         activeTab === "signin" ? "signin" : "signup"
       }`;
       const payload = activeTab === "signin" ? signIn : signUp;
@@ -80,7 +80,7 @@ const Auth = () => {
   };
 
   const handleGoogleLogin = async ()=>{
-    window.open("http://localhost:3000/auth/googleAuth/google","_self")
+    window.open(`${import.meta.env.VITE_BACKEND_URL}/auth/googleAuth/google`,"_self")
    
   }
 

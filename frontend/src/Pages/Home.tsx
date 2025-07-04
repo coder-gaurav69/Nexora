@@ -48,7 +48,7 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const url = "http://localhost:3000/api/products";
+        const url = `${import.meta.env.VITE_BACKEND_URL}/api/products`;
         const response = await axios.get<{ data: ProductType[] }>(url, {
           withCredentials: true,
         });

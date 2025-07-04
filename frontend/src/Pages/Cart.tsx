@@ -38,7 +38,7 @@ const Cart = () => {
 
   const handleDelete = async (customerId: string, productId: string) => {
     try {
-      const url = "http://localhost:3000/api/userCartData/deleteItem";
+      const url = `${import.meta.env.VITE_BACKEND_URL}/api/userCartData/deleteItem`;
 
       const payload = {
         customerId,
@@ -62,7 +62,7 @@ const Cart = () => {
     quantity: number
   ) => {
     try {
-      const url = "http://localhost:3000/api/userCartData/update";
+      const url = `${import.meta.env.VITE_BACKEND_URL}/api/userCartData/update`;
       const payload = {
         customerId,
         productId,
@@ -82,7 +82,7 @@ const Cart = () => {
   useEffect(() => {
     const fetchCartData = async () => {
       try {
-        const url = `http://localhost:3000/api/userCartData?customerId=${customerId}`;
+        const url = `${import.meta.env.VITE_BACKEND_URL}/api/userCartData?customerId=${customerId}`;
         const response = await axios.get<{ data: CartItem[] }>(url, {
           withCredentials: true,
         });

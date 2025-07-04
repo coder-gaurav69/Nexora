@@ -65,7 +65,7 @@ const Shipping = () => {
     const fetchUserData = async () => {
       if (recipientType === "Myself") {
         try {
-          const url = `http://localhost:3000/api/userDetails?customerId=${customerId}`;
+          const url = `${import.meta.env.VITE_BACKEND_URL}/api/userDetails?customerId=${customerId}`;
           console.log("customerId");
           const response = await axios.get(url, { withCredentials: true });
           const fetchedData = (response.data as any)?.data?.[0];
@@ -85,7 +85,7 @@ const Shipping = () => {
         }
       } else if (recipientType === "Other") {
         const orderId = localStorage.getItem("orderId");
-        const url = `http://localhost:3000/api/getOrderDetails?orderId=${orderId}`;
+        const url = `${import.meta.env.VITE_BACKEND_URL}/api/getOrderDetails?orderId=${orderId}`;
         try {
           const response = (
             (await axios.get(url, { withCredentials: true })).data as any
@@ -138,7 +138,7 @@ const Shipping = () => {
       const orderId = localStorage.getItem("orderId");
       if (orderId) {
         try {
-          const url = `http://localhost:3000/api/getOrderDetails?orderId=${orderId}`;
+          const url = `${import.meta.env.VITE_BACKEND_URL}/api/getOrderDetails?orderId=${orderId}`;
           const response = (
             (await axios.get(url, { withCredentials: true })).data as any
           ).data[0];
@@ -175,7 +175,7 @@ const Shipping = () => {
           orderStatus: "Pending",
         };
 
-        const url = "http://localhost:3000/api/createOrder";
+        const url = `${import.meta.env.VITE_BACKEND_URL}/api/createOrder`;
         const responseOrder = await axios.post(url, orderPayload, {
           withCredentials: true,
         });
@@ -188,7 +188,7 @@ const Shipping = () => {
       }
     } else {
       try {
-        const url = `http://localhost:3000/api/updateOrder/${orderId}`;
+        const url = `${import.meta.env.VITE_BACKEND_URL}/api/updateOrder/${orderId}`;
         const response = await axios.patch(
           url,
           {

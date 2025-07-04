@@ -24,7 +24,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     try {
-      const url = "http://localhost:3000/api/customAuth/logout";
+      const url = `${import.meta.env.VITE_BACKEND_URL}/api/customAuth/logout`;
       const response = await axios.post(
         url,
         { customerId:customerId },

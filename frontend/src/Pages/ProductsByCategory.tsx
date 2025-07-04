@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import {useNavigate, useParams } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import Product from "../Components/Product";
 import axios from "axios";
@@ -42,7 +42,7 @@ const ProductsByCategory = () => {
   useEffect(() => {
     const filterProducts = async () => {
       try {
-        const url = `http://localhost:3000/api/products`;
+        const url = `${import.meta.env.VITE_BACKEND_URL}/api/products`;
         const response = await axios.get<{ data: ProductType[] }>(url, {
           withCredentials: true,
         });
