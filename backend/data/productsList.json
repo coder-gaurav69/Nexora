@@ -1,0 +1,1321 @@
+{
+  "products": [
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789001",
+      "productName": "Wireless Earbuds Pro",
+      "ratings": 4.8,
+      "description": "High-fidelity audio with noise cancellation and 24-hour battery life for immersive listening.",
+      "price": 129.99,
+      "category": "Electronics",
+      "brandType": "TechTrend Innovations",
+      "features": [
+        "Active Noise Cancellation",
+        "24-hour battery life with charging case",
+        "IPX5 water resistance",
+        "Touch controls",
+        "Bluetooth 5.2"
+      ],
+      "productDetails": "Compact wireless earbuds designed for audiophiles, offering crystal-clear sound and seamless connectivity. Ideal for workouts, travel, and daily use.",
+      "boxContents": [
+        "Earbuds",
+        "Charging case",
+        "USB-C cable",
+        "3 sizes of ear tips",
+        "User manual"
+      ],
+      "colorsAvailable": [
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
+            "https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
+            "https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
+            "https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
+            "https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+          ]
+        },
+        {
+          "color": "White",
+          "imageList": [
+            "https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
+            "https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
+            "https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
+            "https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
+            "https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+          ]
+        }
+      ],
+      "materialMadeUp": "ABS plastic, silicone ear tips"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789002",
+      "productName": "Smartphone X12",
+      "ratings": 4.5,
+      "description": "6.7-inch AMOLED display, 128GB storage, and triple camera system for stunning photos.",
+      "price": 799.99,
+      "category": "Electronics",
+      "brandType": "NexGen Mobile",
+      "features": [
+        "6.7-inch AMOLED display",
+        "128GB storage",
+        "Triple camera (48MP main, 12MP ultra-wide, 8MP telephoto)",
+        "5G connectivity",
+        "4500mAh battery with fast charging"
+      ],
+      "productDetails": "A flagship smartphone with cutting-edge performance, ideal for gaming, photography, and multitasking.",
+      "boxContents": [
+        "Smartphone",
+        "Charger",
+        "USB-C cable",
+        "SIM ejector tool",
+        "Quick start guide"
+      ],
+      "colorsAvailable": [
+        {
+          "color": "Midnight Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1598327105666-5b89351aff97",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1598327105666-5b89351aff97",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1598327105666-5b89351aff97"
+          ]
+        },
+        {
+          "color": "Starlight Silver",
+          "imageList": [
+            "https://images.unsplash.com/photo-1607936854278-16f5e6b5630b",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1607936854278-16f5e6b5630b",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1607936854278-16f5e6b5630b",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Aluminum frame, Gorilla Glass front and back"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789003",
+      "productName": "Running Shoes Ultra",
+      "ratings": 4.6,
+      "description": "Lightweight, breathable mesh with cushioned sole for long runs.",
+      "price": 89.99,
+      "category": "Footwear",
+      "brandType": "SportPulse",
+      "sexType": "Unisex",
+      "sizesAvailable": ["US 7", "US 8", "US 9", "US 10", "US 11"],
+      "features": [
+        "Breathable mesh upper",
+        "EVA foam midsole",
+        "Rubber outsole for traction",
+        "Lightweight design",
+        "Arch support"
+      ],
+      "productDetails": "Designed for runners seeking comfort and durability, these shoes provide excellent cushioning and support for long-distance runs.",
+      "boxContents": ["Pair of shoes", "Replacement laces", "Care guide"],
+      "colorsAvailable": [
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
+          ]
+        },
+        {
+          "color": "Blue",
+          "imageList": [
+            "https://images.unsplash.com/photo-1606109032367-7f4a1b30b8ca",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1606109032367-7f4a1b30b8ca",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1606109032367-7f4a1b30b8ca",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Mesh, EVA foam, rubber"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789004",
+      "productName": "Stainless Steel Cookware Set",
+      "ratings": 4.7,
+      "description": "10-piece set with non-stick coating and heat-resistant handles.",
+      "price": 149.99,
+      "category": "Kitchen",
+      "brandType": "HomeChef Essentials",
+      "features": [
+        "Non-stick coating",
+        "Heat-resistant handles",
+        "Dishwasher-safe",
+        "Even heat distribution",
+        "Compatible with all stovetops"
+      ],
+      "productDetails": "A versatile cookware set for home chefs, perfect for frying, boiling, and sautéing with easy cleanup.",
+      "boxContents": [
+        "2 frying pans",
+        "2 saucepans",
+        "1 stockpot",
+        "5 lids",
+        "User manual"
+      ],
+      "colorsAvailable": [
+        {
+          "color": "Silver",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        },
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Stainless steel, non-stick coating, bakelite handles"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789005",
+      "productName": "4K LED Smart TV 55\"",
+      "ratings": 4.4,
+      "description": "Ultra HD display with built-in streaming apps and voice control.",
+      "price": 499.99,
+      "category": "Electronics",
+      "brandType": "VisionTech",
+      "features": [
+        "4K Ultra HD resolution",
+        "Built-in streaming apps (Netflix, YouTube)",
+        "Voice control remote",
+        "HDR support",
+        "Wi-Fi connectivity"
+      ],
+      "productDetails": "A smart TV offering vibrant visuals and seamless streaming for an enhanced home entertainment experience.",
+      "boxContents": [
+        "TV",
+        "Remote control",
+        "Stand",
+        "Power cable",
+        "User manual"
+      ],
+      "colorsAvailable": [
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1593784991095-1e7e7a7a27c8",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1593784991095-1e7e7a7a27c8",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1593784991095-1e7e7a7a27c8"
+          ]
+        },
+        {
+          "color": "Silver",
+          "imageList": [
+            "https://images.unsplash.com/photo-1601944179066-1a8e785e4181",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1601944179066-1a8e785e4181",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1601944179066-1a8e785e4181",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Plastic, tempered glass"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789006",
+      "productName": "Leather Laptop Bag",
+      "ratings": 4.3,
+      "description": "Premium leather bag with padded compartment for 15-inch laptops.",
+      "price": 79.99,
+      "category": "Accessories",
+      "brandType": "UrbanCraft",
+      "features": [
+        "Padded laptop compartment",
+        "Adjustable shoulder strap",
+        "Multiple pockets",
+        "Water-resistant lining",
+        "Magnetic closure"
+      ],
+      "productDetails": "A stylish and durable bag for professionals, designed to protect laptops and carry essentials.",
+      "boxContents": ["Laptop bag", "Shoulder strap", "Care guide"],
+      "colorsAvailable": [
+        {
+          "color": "Brown",
+          "imageList": [
+            "https://images.unsplash.com/photo-1581235720704-06d3acfcb424",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1581235720704-06d3acfcb424",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1581235720704-06d3acfcb424"
+          ]
+        },
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Genuine leather, polyester lining"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789007",
+      "productName": "Electric Kettle 1.7L",
+      "ratings": 4.5,
+      "description": "Fast-boiling kettle with auto shut-off and LED indicator.",
+      "price": 34.99,
+      "category": "Kitchen",
+      "brandType": "BrewMaster",
+      "features": [
+        "1.7L capacity",
+        "Auto shut-off",
+        "LED indicator",
+        "Cordless design",
+        "Boil-dry protection"
+      ],
+      "productDetails": "A reliable kettle for quick boiling, perfect for tea, coffee, and instant meals.",
+      "boxContents": ["Kettle", "Base", "User manual"],
+      "colorsAvailable": [
+        {
+          "color": "Silver",
+          "imageList": [
+            "https://images.unsplash.com/photo-1602144162390-8c7f7c3b1b1b",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1602144162390-8c7f7c3b1b1b",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1602144162390-8c7f7c3b1b1b"
+          ]
+        },
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Stainless steel, plastic"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789008",
+      "productName": "Yoga Mat Premium",
+      "ratings": 4.8,
+      "description": "Eco-friendly, non-slip mat with 6mm thickness for comfort.",
+      "price": 29.99,
+      "category": "Fitness",
+      "brandType": "ZenFit",
+      "features": [
+        "Non-slip surface",
+        "6mm thickness",
+        "Eco-friendly material",
+        "Lightweight and portable",
+        "Sweat-resistant"
+      ],
+      "productDetails": "Ideal for yoga, pilates, and floor exercises, offering superior grip and cushioning.",
+      "boxContents": ["Yoga mat", "Carrying strap", "Care guide"],
+      "colorsAvailable": [
+        {
+          "color": "Blue",
+          "imageList": [
+            "https://images.unsplash.com/photo-1601925266748-373a5b4e596c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1601925266748-373a5b4e596c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1601925266748-373a5b4e596c"
+          ]
+        },
+        {
+          "color": "Green",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "TPE (Thermoplastic Elastomer)"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789009",
+      "productName": "Bluetooth Speaker Mini",
+      "ratings": 4.2,
+      "description": "Portable speaker with 10-hour battery and waterproof design.",
+      "price": 39.99,
+      "category": "Electronics",
+      "brandType": "SoundWave",
+      "features": [
+        "IPX7 waterproof",
+        "10-hour battery life",
+        "Bluetooth 5.0",
+        "Built-in microphone",
+        "Compact design"
+      ],
+      "productDetails": "Perfect for outdoor adventures, delivering rich sound in a portable package.",
+      "boxContents": ["Speaker", "USB cable", "User manual"],
+      "colorsAvailable": [
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1605649487212-47bdab064df7",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1605649487212-47bdab064df7",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1605649487212-47bdab064df7"
+          ]
+        },
+        {
+          "color": "Red",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Plastic, silicone"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789010",
+      "productName": "Men's Casual Jacket",
+      "ratings": 4.4,
+      "description": "Water-resistant jacket with fleece lining for cool weather.",
+      "price": 59.99,
+      "category": "Clothing",
+      "brandType": "TrendSetters",
+      "sexType": "Men",
+      "sizesAvailable": ["S", "M", "L", "XL"],
+      "features": [
+        "Water-resistant outer shell",
+        "Fleece lining",
+        "Adjustable hood",
+        "Zippered pockets",
+        "Breathable fabric"
+      ],
+      "productDetails": "A versatile jacket for casual outings, offering warmth and protection from light rain.",
+      "boxContents": ["Jacket", "Care guide"],
+      "colorsAvailable": [
+        {
+          "color": "Navy",
+          "imageList": [
+            "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3"
+          ]
+        },
+        {
+          "color": "Olive",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Polyester, fleece lining"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789011",
+      "productName": "Coffee Maker 12-Cup",
+      "ratings": 4.6,
+      "description": "Programmable coffee maker with auto-brew and glass carafe.",
+      "price": 69.99,
+      "category": "Kitchen",
+      "brandType": "BrewMaster",
+      "features": [
+        "12-cup capacity",
+        "Programmable timer",
+        "Auto shut-off",
+        "Drip-free pouring",
+        "Reusable filter"
+      ],
+      "productDetails": "Brews rich coffee with ease, perfect for households and offices.",
+      "boxContents": [
+        "Coffee maker",
+        "Glass carafe",
+        "Reusable filter",
+        "User manual"
+      ],
+      "colorsAvailable": [
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1582582621955-8496e9c1d7f7",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1582582621955-8496e9c1d7f7",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1582582621955-8496e9c1d7f7"
+          ]
+        },
+        {
+          "color": "Silver",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Stainless steel, glass, plastic"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789012",
+      "productName": "Fitness Tracker Pro",
+      "ratings": 4.5,
+      "description": "Tracks steps, heart rate, and sleep with OLED display.",
+      "price": 49.99,
+      "category": "Fitness",
+      "brandType": "HealthSync",
+      "features": [
+        "Heart rate monitor",
+        "Sleep tracking",
+        "OLED display",
+        "Water-resistant",
+        "7-day battery life"
+      ],
+      "productDetails": "A sleek fitness tracker for monitoring daily activity and health metrics.",
+      "boxContents": ["Tracker", "Charging cable", "User manual"],
+      "colorsAvailable": [
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1576243345696-4e4b49d3a3f6",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1576243345696-4e4b49d3a3f6",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1576243345696-4e4b49d3a3f6"
+          ]
+        },
+        {
+          "color": "Blue",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Silicone, plastic"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789013",
+      "productName": "Wireless Mouse",
+      "ratings": 4.3,
+      "description": "Ergonomic mouse with adjustable DPI and USB receiver.",
+      "price": 19.99,
+      "category": "Electronics",
+      "brandType": "TechTrend Innovations",
+      "features": [
+        "Adjustable DPI (800/1200/1600)",
+        "Ergonomic design",
+        "USB receiver",
+        "2.4GHz wireless",
+        "Battery life up to 12 months"
+      ],
+      "productDetails": "A reliable mouse for work and gaming, offering precision and comfort.",
+      "boxContents": ["Mouse", "USB receiver", "AA battery", "User manual"],
+      "colorsAvailable": [
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1613146161074-9e3e9e3a3b9e",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1613146161074-9e3e9e3a3b9e",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1613146161074-9e3e9e3a3b9e"
+          ]
+        },
+        {
+          "color": "White",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Plastic"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789014",
+      "productName": "Backpack Travel 40L",
+      "ratings": 4.7,
+      "description": "Durable backpack with laptop sleeve and multiple compartments.",
+      "price": 69.99,
+      "category": "Accessories",
+      "brandType": "AdventureGear",
+      "features": [
+        "40L capacity",
+        "Padded laptop sleeve",
+        "Water-resistant fabric",
+        "Ergonomic straps",
+        "Multiple compartments"
+      ],
+      "productDetails": "Ideal for travel and daily use, offering ample space and organization.",
+      "boxContents": ["Backpack", "Rain cover", "Care guide"],
+      "colorsAvailable": [
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1553062407-98eeb64c6a62",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1553062407-98eeb64c6a62",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1553062407-98eeb64c6a62"
+          ]
+        },
+        {
+          "color": "Grey",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Nylon, polyester"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789015",
+      "productName": "Air Fryer 5.8Qt",
+      "ratings": 4.8,
+      "description": "Digital air fryer with 8 preset cooking modes and non-stick basket.",
+      "price": 89.99,
+      "category": "Kitchen",
+      "brandType": "HomeChef Essentials",
+      "features": [
+        "5.8Qt capacity",
+        "8 preset cooking modes",
+        "Non-stick basket",
+        "Digital touchscreen",
+        "Rapid air technology"
+      ],
+      "productDetails": "Cooks healthy, crispy meals with minimal oil, perfect for families.",
+      "boxContents": ["Air fryer", "Basket", "Recipe book", "User manual"],
+      "colorsAvailable": [
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1617043986170-496ad1f22483",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1617043986170-496ad1f22483",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1617043986170-496ad1f22483"
+          ]
+        },
+        {
+          "color": "Silver",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Stainless steel, plastic"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789016",
+      "productName": "Sunglasses Polarized",
+      "ratings": 4.4,
+      "description": "UV-protective lenses with lightweight metal frame.",
+      "price": 24.99,
+      "category": "Accessories",
+      "brandType": "SunShield",
+      "features": [
+        "Polarized lenses",
+        "UV400 protection",
+        "Lightweight frame",
+        "Scratch-resistant",
+        "Adjustable nose pads"
+      ],
+      "productDetails": "Stylish sunglasses offering glare reduction and eye protection for outdoor activities.",
+      "boxContents": ["Sunglasses", "Case", "Cleaning cloth", "User guide"],
+      "colorsAvailable": [
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1572635196237-14b3f281503f",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1572635196237-14b3f281503f",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1572635196237-14b3f281503f"
+          ]
+        },
+        {
+          "color": "Silver",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Metal, polycarbonate lenses"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789017",
+      "productName": "Gaming Headset",
+      "ratings": 4.6,
+      "description": "Surround sound headset with noise-canceling mic and RGB lights.",
+      "price": 59.99,
+      "category": "Electronics",
+      "brandType": "GameZone",
+      "features": [
+        "7.1 surround sound",
+        "Noise-canceling microphone",
+        "RGB lighting",
+        "Adjustable headband",
+        "USB and 3.5mm connectivity"
+      ],
+      "productDetails": "Designed for gamers, offering immersive audio and clear communication.",
+      "boxContents": ["Headset", "USB cable", "3.5mm cable", "User manual"],
+      "colorsAvailable": [
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600080972468-8b0b4c1df5eb",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600080972468-8b0b4c1df5eb",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600080972468-8b0b4c1df5eb"
+          ]
+        },
+        {
+          "color": "White",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Plastic, leatherette ear cushions"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789018",
+      "productName": "Women’s Active Leggings",
+      "ratings": 4.5,
+      "description": "High-waisted, stretchy leggings with moisture-wicking fabric.",
+      "price": 34.99,
+      "category": "Clothing",
+      "brandType": "SportPulse",
+      "sexType": "Women",
+      "sizesAvailable": ["XS", "S", "M", "L"],
+      "features": [
+        "High-waisted design",
+        "Moisture-wicking fabric",
+        "Four-way stretch",
+        "Side pocket",
+        "Flatlock seams"
+      ],
+      "productDetails": "Comfortable leggings for workouts and casual wear, offering flexibility and breathability.",
+      "boxContents": ["Leggings", "Care guide"],
+      "colorsAvailable": [
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1598528734960-c1d8a6a8e9e7",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1598528734960-c1d8a6a8e9e7",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1598528734960-c1d8a6a8e9e7"
+          ]
+        },
+        {
+          "color": "Navy",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Polyester, spandex"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789019",
+      "productName": "Portable Charger 10000mAh",
+      "ratings": 4.7,
+      "description": "Compact power bank with dual USB ports and fast charging.",
+      "price": 29.99,
+      "category": "Electronics",
+      "brandType": "PowerPlus",
+      "features": [
+        "10000mAh capacity",
+        "Dual USB ports",
+        "Fast charging",
+        "LED battery indicator",
+        "Compact design"
+      ],
+      "productDetails": "A reliable power bank for charging devices on the go, perfect for travel.",
+      "boxContents": ["Power bank", "USB cable", "User manual"],
+      "colorsAvailable": [
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1605000798149-1468f315d02a",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1605000798149-1468f315d02a",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1605000798149-1468f315d02a"
+          ]
+        },
+        {
+          "color": "White",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Plastic, lithium-ion battery"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789020",
+      "productName": "Non-Slip Sneakers",
+      "ratings": 4.3,
+      "description": "Casual sneakers with memory foam insole and rubber sole.",
+      "price": 49.99,
+      "category": "Footwear",
+      "brandType": "UrbanCraft",
+      "sexType": "Unisex",
+      "sizesAvailable": ["US 6", "US 7", "US 8", "US 9", "US 10"],
+      "features": [
+        "Memory foam insole",
+        "Non-slip rubber sole",
+        "Breathable upper",
+        "Lightweight",
+        "Cushioned heel"
+      ],
+      "productDetails": "Versatile sneakers for everyday wear, combining style and comfort.",
+      "boxContents": ["Pair of sneakers", "Replacement laces", "Care guide"],
+      "colorsAvailable": [
+        {
+          "color": "White",
+          "imageList": [
+            "https://images.unsplash.com/photo-1460353581647-37b91f7d5d07",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1460353581647-37b91f7d5d07",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1460353581647-37b91f7d5d07"
+          ]
+        },
+        {
+          "color": "Grey",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Canvas, rubber, memory foam"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789021",
+      "productName": "Blender 700W",
+      "ratings": 4.5,
+      "description": "High-speed blender with 48oz glass jar and pulse function.",
+      "price": 59.99,
+      "category": "Kitchen",
+      "brandType": "HomeChef Essentials",
+      "features": [
+        "700W motor",
+        "48oz glass jar",
+        "Pulse function",
+        "Stainless steel blades",
+        "Dishwasher-safe parts"
+      ],
+      "productDetails": "A powerful blender for smoothies, soups, and sauces, built for durability.",
+      "boxContents": ["Blender", "Glass jar", "Lid", "User manual"],
+      "colorsAvailable": [
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1581595214965-544d795c558e",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1581595214965-544d795c558e",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1581595214965-544d795c558e"
+          ]
+        },
+        {
+          "color": "Silver",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Stainless steel, glass, plastic"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789022",
+      "productName": "Smart Bulb LED",
+      "ratings": 4.4,
+      "description": "Wi-Fi-enabled bulb with color-changing and dimming features.",
+      "price": 14.99,
+      "category": "Electronics",
+      "brandType": "BrightHome",
+      "features": [
+        "Wi-Fi connectivity",
+        "16 million colors",
+        "Dimmable",
+        "App control",
+        "Voice assistant compatible"
+      ],
+      "productDetails": "A smart bulb for customizable lighting, compatible with Alexa and Google Home.",
+      "boxContents": ["Bulb", "User manual"],
+      "colorsAvailable": [
+        {
+          "color": "White",
+          "imageList": [
+            "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15"
+          ]
+        },
+        {
+          "color": "Multicolor",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Plastic, LED"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789023",
+      "productName": "Hiking Boots Waterproof",
+      "ratings": 4.6,
+      "description": "Durable boots with ankle support and slip-resistant sole.",
+      "price": 79.99,
+      "category": "Footwear",
+      "brandType": "AdventureGear",
+      "sexType": "Unisex",
+      "sizesAvailable": ["US 7", "US 8", "US 9", "US 10", "US 11"],
+      "features": [
+        "Waterproof membrane",
+        "Slip-resistant sole",
+        "Ankle support",
+        "Breathable lining",
+        "Reinforced toe"
+      ],
+      "productDetails": "Rugged boots for hiking and outdoor adventures, offering protection and comfort.",
+      "boxContents": ["Pair of boots", "Care guide"],
+      "colorsAvailable": [
+        {
+          "color": "Brown",
+          "imageList": [
+            "https://images.unsplash.com/photo-1605405748313-a416a1b84491",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1605405748313-a416a1b84491",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1605405748313-a416a1b84491"
+          ]
+        },
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Leather, rubber, Gore-Tex"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789024",
+      "productName": "Desk Organizer",
+      "ratings": 4.2,
+      "description": "Wooden organizer with compartments for pens and gadgets.",
+      "price": 24.99,
+      "category": "Office",
+      "brandType": "WorkSpace",
+      "features": [
+        "Multiple compartments",
+        "Wooden finish",
+        "Non-slip base",
+        "Space for phone and tablet",
+        "Durable construction"
+      ],
+      "productDetails": "Keeps your desk tidy with dedicated spaces for office essentials.",
+      "boxContents": ["Organizer", "Assembly guide"],
+      "colorsAvailable": [
+        {
+          "color": "Walnut",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        },
+        {
+          "color": "Oak",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Wood, felt base"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789025",
+      "productName": "Electric Toothbrush",
+      "ratings": 4.8,
+      "description": "Rechargeable toothbrush with 5 brushing modes and timer.",
+      "price": 39.99,
+      "category": "Personal Care",
+      "brandType": "HealthSync",
+      "features": [
+        "5 brushing modes",
+        "2-minute timer",
+        "Rechargeable battery",
+        "Waterproof",
+        "Long-lasting bristles"
+      ],
+      "productDetails": "Promotes oral health with advanced cleaning technology and ergonomic design.",
+      "boxContents": ["Toothbrush", "2 brush heads", "Charger", "User manual"],
+      "colorsAvailable": [
+        {
+          "color": "White",
+          "imageList": [
+            "https://images.unsplash.com/photo-1607613009820-48133b1b1362",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1607613009820-48133b1b1362",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1607613009820-48133b1b1362"
+          ]
+        },
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Plastic, nylon bristles"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789026",
+      "productName": "Camping Tent 4-Person",
+      "ratings": 4.5,
+      "description": "Weather-resistant tent with easy setup and ventilation.",
+      "price": 99.99,
+      "category": "Outdoor",
+      "brandType": "AdventureGear",
+      "features": [
+        "4-person capacity",
+        "Waterproof fabric",
+        "Easy setup",
+        "Ventilation windows",
+        "Storage pockets"
+      ],
+      "productDetails": "A spacious tent for camping, designed for durability and comfort in various weather conditions.",
+      "boxContents": [
+        "Tent",
+        "Poles",
+        "Stakes",
+        "Rainfly",
+        "Carry bag",
+        "User manual"
+      ],
+      "colorsAvailable": [
+        {
+          "color": "Green",
+          "imageList": [
+            "https://images.unsplash.com/photo-1504280390367-361c6d9f4f4b",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1504280390367-361c6d9f4f4b",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1504280390367-361c6d9f4f4b"
+          ]
+        },
+        {
+          "color": "Blue",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Polyester, fiberglass poles"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789027",
+      "productName": "Handheld Vacuum",
+      "ratings": 4.4,
+      "description": "Cordless vacuum with strong suction and multiple attachments.",
+      "price": 49.99,
+      "category": "Home",
+      "brandType": "CleanTech",
+      "features": [
+        "Cordless design",
+        "Strong suction",
+        "Multiple attachments",
+        "HEPA filter",
+        "Rechargeable battery"
+      ],
+      "productDetails": "A lightweight vacuum for quick cleanups, ideal for homes and cars.",
+      "boxContents": [
+        "Vacuum",
+        "Crevice tool",
+        "Brush attachment",
+        "Charger",
+        "User manual"
+      ],
+      "colorsAvailable": [
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        },
+        {
+          "color": "White",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Plastic, HEPA filter"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789028",
+      "productName": "Smart Watch Series 5",
+      "ratings": 4.7,
+      "description": "Fitness tracking, notifications, and water-resistant design.",
+      "price": 199.99,
+      "category": "Electronics",
+      "brandType": "TechTrend Innovations",
+      "features": [
+        "Fitness and sleep tracking",
+        "Water-resistant up to 50m",
+        "Touchscreen display",
+        "Notifications",
+        "7-day battery life"
+      ],
+      "productDetails": "A stylish smartwatch for fitness enthusiasts, offering real-time health monitoring.",
+      "boxContents": ["Smartwatch", "Charging cable", "User manual"],
+      "colorsAvailable": [
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1546868871-7041f2a55e12",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1546868871-7041f2a55e12",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1546868871-7041f2a55e12"
+          ]
+        },
+        {
+          "color": "Silver",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Aluminum, silicone strap"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789029",
+      "productName": "Ceramic Dinnerware Set",
+      "ratings": 4.5,
+      "description": "16-piece set, dishwasher-safe with modern design.",
+      "price": 79.99,
+      "category": "Kitchen",
+      "brandType": "HomeChef Essentials",
+      "features": [
+        "16-piece set (4 plates, 4 bowls, 4 mugs, 4 saucers)",
+        "Dishwasher-safe",
+        "Microwave-safe",
+        "Chip-resistant",
+        "Modern design"
+      ],
+      "productDetails": "Elegant dinnerware for everyday dining or special occasions, built to last.",
+      "boxContents": [
+        "4 plates",
+        "4 bowls",
+        "4 mugs",
+        "4 saucers",
+        "Care guide"
+      ],
+      "colorsAvailable": [
+        {
+          "color": "White",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        },
+        {
+          "color": "Blue",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Ceramic"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-123456789030",
+      "productName": "Wireless Keyboard",
+      "ratings": 4.3,
+      "description": "Slim, ergonomic keyboard with long battery life.",
+      "price": 29.99,
+      "category": "Electronics",
+      "brandType": "TechTrend Innovations",
+      "features": [
+        "Wireless 2.4GHz",
+        "Ergonomic design",
+        "Quiet keys",
+        "Up to 12-month battery life",
+        "Compact layout"
+      ],
+      "productDetails": "A sleek keyboard for efficient typing, ideal for home or office use.",
+      "boxContents": ["Keyboard", "USB receiver", "AA battery", "User manual"],
+      "colorsAvailable": [
+        {
+          "color": "Black",
+          "imageList": [
+            "https://images.unsplash.com/photo-1587829748821-6698032e4307",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1587829748821-6698032e4307",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1587829748821-6698032e4307"
+          ]
+        },
+        {
+          "color": "Silver",
+          "imageList": [
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          ]
+        }
+      ],
+      "materialMadeUp": "Plastic"
+    }
+  ]
+}

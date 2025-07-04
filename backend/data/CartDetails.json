@@ -1,0 +1,352 @@
+[
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440001",
+    "productName": "True Wireless Earbuds with Noise Cancellation",
+    "quantity": 2,
+    "price": 1299,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440002",
+    "productName": "60W USB-C Wall Charger",
+    "quantity": 1,
+    "price": 899,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440003",
+    "productName": "Insulated Stainless Steel Tumbler",
+    "quantity": 3,
+    "price": 599,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440004",
+    "productName": "Adjustable Laptop Cooling Stand",
+    "quantity": 1,
+    "price": 1499,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440005",
+    "productName": "Portable USB Rechargeable Fan",
+    "quantity": 4,
+    "price": 399,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440006",
+    "productName": "RGB Gaming Mouse with Programmable Buttons",
+    "quantity": 2,
+    "price": 699,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440007",
+    "productName": "Smart LED Table Lamp with Dimming",
+    "quantity": 1,
+    "price": 1199,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440008",
+    "productName": "Non-Stick Silicone Baking Mats",
+    "quantity": 3,
+    "price": 499,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440009",
+    "productName": "2TB External SSD Drive",
+    "quantity": 1,
+    "price": 4999,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440010",
+    "productName": "Fitness Smartwatch with Heart Rate Monitor",
+    "quantity": 2,
+    "price": 1799,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440011",
+    "productName": "Fast Wireless Charging Stand",
+    "quantity": 1,
+    "price": 799,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440012",
+    "productName": "Ceramic Travel Mug with Silicone Lid",
+    "quantity": 4,
+    "price": 549,
+    "image": "https://images.unsplash.com/photo-1551931719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440013",
+    "productName": "Foldable Aluminum Phone Holder",
+    "quantity": 2,
+    "price": 349,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440014",
+    "productName": "Waterproof Bluetooth Speaker",
+    "quantity": 1,
+    "price": 1599,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440015",
+    "productName": "Eco-Friendly Yoga Mat",
+    "quantity": 2,
+    "price": 899,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440016",
+    "productName": "Glass Electric Kettle with LED",
+    "quantity": 1,
+    "price": 999,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440017",
+    "productName": "Microfiber Towel Set for Cleaning",
+    "quantity": 5,
+    "price": 299,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440018",
+    "productName": "In-Ear Wireless Headphones",
+    "quantity": 2,
+    "price": 1099,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440019",
+    "productName": "High-Precision Digital Food Scale",
+    "quantity": 1,
+    "price": 599,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440020",
+    "productName": "Water-Resistant Travel Backpack",
+    "quantity": 2,
+    "price": 1399,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440021",
+    "productName": "Clip-On LED Reading Light",
+    "quantity": 3,
+    "price": 399,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440022",
+    "productName": "Stainless Steel Prep Bowls",
+    "quantity": 2,
+    "price": 699,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440023",
+    "productName": "High-Speed HDMI Cable 10ft",
+    "quantity": 3,
+    "price": 399,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440024",
+    "productName": "20000mAh Power Bank with Dual Ports",
+    "quantity": 1,
+    "price": 1099,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440025",
+    "productName": "Reusable Silicone Storage Bags",
+    "quantity": 4,
+    "price": 699,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440026",
+    "productName": "5kg Adjustable Dumbbells",
+    "quantity": 1,
+    "price": 2299,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440027",
+    "productName": "Ultra-Thin Wireless Keyboard",
+    "quantity": 2,
+    "price": 799,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440028",
+    "productName": "Rechargeable Electric Toothbrush",
+    "quantity": 1,
+    "price": 1399,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440029",
+    "productName": "Non-Stick Ceramic Skillet",
+    "quantity": 2,
+    "price": 1099,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440030",
+    "productName": "Indoor Wi-Fi Security Camera",
+    "quantity": 1,
+    "price": 1899,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440031",
+    "productName": "Portable Electric Air Pump",
+    "quantity": 2,
+    "price": 599,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440032",
+    "productName": "Bamboo Cutting Board Set",
+    "quantity": 3,
+    "price": 799,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440033",
+    "productName": "Compact Travel Steamer",
+    "quantity": 1,
+    "price": 999,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440034",
+    "productName": "LED Strip Lights 5m",
+    "quantity": 2,
+    "price": 499,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440035",
+    "productName": "Resistance Band Set",
+    "quantity": 3,
+    "price": 399,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440036",
+    "productName": "Portable Car Vacuum Cleaner",
+    "quantity": 1,
+    "price": 1299,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440037",
+    "productName": "Glass Food Storage Containers",
+    "quantity": 4,
+    "price": 799,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440038",
+    "productName": "Over-Ear Gaming Headset",
+    "quantity": 2,
+    "price": 1499,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440039",
+    "productName": "Electric Milk Frother",
+    "quantity": 1,
+    "price": 599,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440040",
+    "productName": "Foldable Laptop Desk",
+    "quantity": 2,
+    "price": 1099,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440041",
+    "productName": "Reusable Mesh Produce Bags",
+    "quantity": 5,
+    "price": 299,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440042",
+    "productName": "Mini Projector with HDMI",
+    "quantity": 1,
+    "price": 2999,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440043",
+    "productName": "Stainless Steel Garlic Press",
+    "quantity": 3,
+    "price": 399,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440044",
+    "productName": "Wireless Doorbell Kit",
+    "quantity": 1,
+    "price": 799,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440045",
+    "productName": "Portable Smoothie Blender",
+    "quantity": 2,
+    "price": 999,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440046",
+    "productName": "Adjustable Monitor Stand",
+    "quantity": 1,
+    "price": 1299,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440047",
+    "productName": "Silicone Oven Mitts",
+    "quantity": 2,
+    "price": 499,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440048",
+    "productName": "Smart Plug with Wi-Fi",
+    "quantity": 3,
+    "price": 599,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440049",
+    "productName": "Collapsible Laundry Basket",
+    "quantity": 2,
+    "price": 699,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440050",
+    "productName": "Cordless Handheld Vacuum",
+    "quantity": 1,
+    "price": 1599,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+  }
+]
