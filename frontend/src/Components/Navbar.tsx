@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect, useRef } from "react";
+import { useContext, useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import { HiOutlineShoppingBag } from "react-icons/hi";
@@ -25,7 +25,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       const url = `${import.meta.env.VITE_BACKEND_URL}/api/customAuth/logout`;
-      const response = await axios.post(
+      await axios.post(
         url,
         { customerId:customerId },
         { withCredentials: true }
@@ -132,7 +132,7 @@ const Navbar = () => {
                   <Link
                     to="/orders"
                     onClick={() => setIsDropdownOpen(false)}
-                    className="block px-4 py-2 text-sm hover:bg-gray-100 flex items-center gap-1"
+                    className="px-4 py-2 text-sm hover:bg-gray-100 flex items-center gap-1"
                   >
                     <FaBox className="text-sm" /> Orders
                   </Link>

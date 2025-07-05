@@ -1,10 +1,9 @@
 import { useRef, useState, useEffect, useContext } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import { IoMdStar, IoMdStarOutline } from "react-icons/io";
 import { FaCheck, FaPlus, FaMinus } from "react-icons/fa6";
 import ReviewSection from "../Components/Review/ReviewSection";
-import Product from "../Components/Product";
 import axios from "axios";
 import BreadcrumbNavigation from "../Components/BreadcumNavigation";
 import { Success, Failure } from "../Components/Toast";

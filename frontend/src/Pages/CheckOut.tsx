@@ -19,9 +19,8 @@ const CheckOut = () => {
   const url = useLocation().pathname.split("/");
   const [endPoint, setEndpoint] = useState<string>();
   const [steps, setSteps] = useState<number>(2);
-  const { cartDetails, customerId } = useContext(GlobalContext) as {
+  const { cartDetails } = useContext(GlobalContext) as {
     cartDetails: CartItem[];
-    customerId: string;
   };
 
   useEffect(() => {

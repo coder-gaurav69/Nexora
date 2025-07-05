@@ -1,9 +1,4 @@
-import React, {
-  useContext,
-  useEffect,
-  useState,
-  type FormEventHandler,
-} from "react";
+import React, { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FiMail, FiLock } from "react-icons/fi";
 import image from "../assets/image.png";
@@ -23,9 +18,8 @@ type signUpType = {
 };
 
 const Auth = () => {
-  const navigate = useNavigate()
-  const { setRefreshToken, setAccessToken, setIsLoggedIn , setCustomerId } =
-    useContext(GlobalContext);
+  const navigate = useNavigate();
+  const { setIsLoggedIn } = useContext(GlobalContext);
   const [activeTab, setActiveTab] = useState("signin");
   const [signIn, setSignIn] = useState<signInType>({
     email: "",
@@ -62,7 +56,7 @@ const Auth = () => {
         activeTab === "signin" ? "signin" : "signup"
       }`;
       const payload = activeTab === "signin" ? signIn : signUp;
-      const response = await axios.post(url, payload, {
+      await axios.post(url, payload, {
         withCredentials: true,
       });
       // const accessToken = response.headers.get("x-access-token");
@@ -71,7 +65,7 @@ const Auth = () => {
       // setCustomerId(customerId)
 
       // console.log(accessToken,refreshToken)
-      navigate('/');
+      navigate("/");
       // console.log(response);
       setIsLoggedIn(true);
     } catch (error) {
@@ -79,11 +73,12 @@ const Auth = () => {
     }
   };
 
-  const handleGoogleLogin = async ()=>{
-    window.open(`${import.meta.env.VITE_BACKEND_URL}/auth/googleAuth/google`,"_self")
-   
-  }
-
+  const handleGoogleLogin = async () => {
+    window.open(
+      `${import.meta.env.VITE_BACKEND_URL}/auth/googleAuth/google`,
+      "_self"
+    );
+  };
 
   return (
     <div className="min-h-screen flex flex-col md:flex-row ">
@@ -228,7 +223,10 @@ const Auth = () => {
             <div className="flex-grow h-px bg-gray-300"></div>
           </div>
 
-          <button className="w-full border py-2 px-4 flex items-center justify-center rounded-md text-sm hover:bg-gray-100 transition" onClick={handleGoogleLogin}>
+          <button
+            className="w-full border py-2 px-4 flex items-center justify-center rounded-md text-sm hover:bg-gray-100 transition"
+            onClick={handleGoogleLogin}
+          >
             <FcGoogle className="text-lg mr-2" /> Sign in with Google
           </button>
 

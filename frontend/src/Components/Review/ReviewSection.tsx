@@ -111,7 +111,7 @@ const ReviewSection: React.FC<ReviewSectionProps> = ({
       </div>
 
       {/* users reviews */}
-      {/* {reviews.map(
+      {reviews.map(
         ({ name, title, review, productReviewImages, rating, date }, index) => (
           <div key={index} className="my-3">
             <ReviewTemplat
@@ -124,7 +124,7 @@ const ReviewSection: React.FC<ReviewSectionProps> = ({
             />
           </div>
         )
-      )} */}
+      )}
     </div>
   );
 };

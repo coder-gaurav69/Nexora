@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate, useOutletContext } from "react-router-dom";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { CiCreditCard1, CiDeliveryTruck } from "react-icons/ci";

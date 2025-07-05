@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Navbar from "../Components/Navbar";
 import ImageCarousel from "../Components/ImageCarousel";
 import { FaCaretLeft, FaCaretRight } from "react-icons/fa";
