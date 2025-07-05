@@ -137,3 +137,4 @@ const GlobalProvider = ({ children }: any) => {
 };
 
 export { GlobalProvider, GlobalContext };
+

@@ -9,10 +9,11 @@ import axios from "axios";
 import BreadcrumbNavigation from "../Components/BreadcumNavigation";
 import { Success, Failure } from "../Components/Toast";
 import { GlobalContext } from "../ContextApi/GlobalVariables";
+import ReviewForm from "../Components/Review/ReviewForm";
 
 const ProductPage = () => {
   const { id } = useParams<string>();
-  const { customerId } = useContext(GlobalContext);
+  const { customerId, openReviewForm } = useContext(GlobalContext);
   const navigate = useNavigate();
 
   type ColorImage = {
@@ -108,7 +109,7 @@ const ProductPage = () => {
     };
   }, [id]);
 
-  const handleAddToCart = async (val:boolean) => {
+  const handleAddToCart = async (val: boolean) => {
     try {
       const url = `${import.meta.env.VITE_BACKEND_URL}/api/add-cart-product`;
       const payload = {
@@ -122,17 +123,21 @@ const ProductPage = () => {
       };
       const res = await axios.post(url, payload, { withCredentials: true });
       console.log(res?.data);
-     {val && Success("Item added to your cart successfully!");}
+      {
+        val && Success("Item added to your cart successfully!");
+      }
     } catch (error) {
       console.log(error);
-      {val && Failure("Failed to add the product. Please try again.");}
+      {
+        val && Failure("Failed to add the product. Please try again.");
+      }
     }
   };
 
-  const handleByeNow = async ()=>{
+  const handleByeNow = async () => {
     await handleAddToCart(false);
-    navigate('/cart')
-  }
+    navigate("/cart");
+  };
 
   return (
     <>
@@ -187,7 +192,8 @@ const ProductPage = () => {
             </div>
 
             <div className="text-4xl text-[#2094F3] font-extrabold my-4">
-              <span className="font-bold">&#8377;</span> {product?.price.toFixed(2)}
+              <span className="font-bold">&#8377;</span>{" "}
+              {product?.price.toFixed(2)}
             </div>
 
             <div>
@@ -222,7 +228,9 @@ const ProductPage = () => {
                             alt=""
                             className="w-[50px] h-[50px] object-cover rounded-md p-1 shadow-[0_0_5px_rgba(0,0,0,0.5)] "
                           />
-                          <h1 className="text-sm font-semibold text-center">{c}</h1>
+                          <h1 className="text-sm font-semibold text-center">
+                            {c}
+                          </h1>
                         </div>
                       )
                     )}
@@ -293,12 +301,14 @@ const ProductPage = () => {
               </div>
               <button
                 className="px-12 py-2 bg-[#2094F3] w-full xsm:w-fit text-center rounded-md font-semibold text-white text-nowrap flex items-center"
-                onClick={()=>handleAddToCart(true)}
+                onClick={() => handleAddToCart(true)}
               >
                 Add to Cart
               </button>
-              <button className="px-12 py-2 bg-yellow-900 w-full xsm:w-fit text-center rounded-md font-semibold text-white text-nowrap flex items-center"
-              onClick={handleByeNow}>
+              <button
+                className="px-12 py-2 bg-yellow-900 w-full xsm:w-fit text-center rounded-md font-semibold text-white text-nowrap flex items-center"
+                onClick={handleByeNow}
+              >
                 Buy Now
               </button>
             </div>
@@ -310,7 +320,7 @@ const ProductPage = () => {
           </div>
         </div>
 
-        <div className="flex flex-col my-[50px]">
+        {/* <div className="flex flex-col my-[50px]">
           <h1 className="text-3xl font-bold xsm:text-start text-center">
             Related products
           </h1>
@@ -341,7 +351,7 @@ const ProductPage = () => {
               )
             )}
           </div>
-        </div>
+        </div> */}
 
         <div className="my-10">
           <ReviewSection
@@ -357,6 +367,18 @@ const ProductPage = () => {
           />
         </div>
       </div>
+
+      {/* {openReviewForm && (
+        <div className="h-full fixed top-0 left-1/2 -translate-x-1/2 w-full z-20 backdrop-blur-[2px] flex items-center">
+          <ReviewForm />
+        </div>
+      )} */}
+      {openReviewForm && (
+
+        <div className="popup fixed inset-0 z-20 backdrop-blur-[2px] flex items-center justify-center bg-[rgba(0,0,0,0.7)]">
+          <ReviewForm />
+        </div>
+      )}
     </>
   );
 };

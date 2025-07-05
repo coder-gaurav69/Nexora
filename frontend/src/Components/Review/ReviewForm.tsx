@@ -43,7 +43,8 @@ const ReviewForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-4 w-[70%] p-4 shadow-md"
+      className="flex flex-col gap-4 w-[90%] md:w-[70%] lg:w-[60%] m-auto  px-4 py-8 shadow-md h-[550px] overflow-y-scroll bg-white rounded-md
+      "
     >
       <div className="flex justify-between">
         <h1 className="font-bold text-2xl">Write a Review</h1>
@@ -136,6 +137,7 @@ const ReviewForm = () => {
             setImages([]);
             setName(null);
             setRating(0);
+            setOpenReviewForm(false)
           }}
         >
           Cancel
