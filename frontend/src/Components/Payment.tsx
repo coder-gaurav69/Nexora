@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useOutletContext } from "react-router-dom";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { CiCreditCard1, CiDeliveryTruck } from "react-icons/ci";
@@ -64,7 +64,21 @@ const Payment = () => {
   };
   const [isOnlinePayment, setIsOnlinePayment] = useState(false);
   const [isCashOnDelivery, setIsCashOnDelivery] = useState(false);
-  const [userInfo, setUserInfo] = useState<userType[]>([]);
+  const [userInfo, setUserInfo] = useState<userType>();
+
+
+  useEffect(()=>{
+    const handlePaymentInfo = async ()=>{
+      const url = `http://localhost:3000/api/userDetails?customerId=${customerId}`;
+      const response = ((await axios.get(url,{withCredentials:true})).data as any)?.data[0];
+      setUserInfo({
+        name:response.name,
+        email:response.email,
+        contact:"8287291613"
+      })
+    }
+    handlePaymentInfo();
+  },[])
 
   const loadRazorpay = (src: string): Promise<boolean> => {
     return new Promise((resolve) => {
@@ -135,9 +149,9 @@ const Payment = () => {
         }
       },
       prefill: {
-        name: userInfo[0]?.name,
-        email: userInfo[0]?.email,
-        contact: userInfo[0]?.contact,
+        name: userInfo?.name,
+        email: userInfo?.email,
+        contact: userInfo?.contact,
       },
       notes: {
         address: "Razorpay Corporate Office",
