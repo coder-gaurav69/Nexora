@@ -19,7 +19,7 @@ const ReviewForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const url = `${import.meta.env.BACKEND_URL}/api/post-review`;
+    const url = `${import.meta.env.VITE_BACKEND_URL}/api/post-review`;
     const payload = {
       title,
       review,
@@ -33,6 +33,7 @@ const ReviewForm = () => {
         withCredentials: true,
       });
       console.log("Review submitted successfully:", response.data);
+      setOpenReviewForm(false);
     } catch (error: any) {
       console.error(
         "Error submitting review:",

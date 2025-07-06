@@ -256,6 +256,7 @@ const ProductPage = () => {
 
             <div className="gap-5 my-5 flex flex-col xsm:flex-row">
               <div className="[border:1px_solid_rgba(0,0,0,0.2)] flex w-full justify-between xsm:w-fit rounded-md">
+
                 <div
                   className="m-1 p-2 hover:bg-yellow-400 rounded-sm flex items-center"
                   onClick={() => {
@@ -267,12 +268,13 @@ const ProductPage = () => {
                 >
                   <FaMinus />
                 </div>
+
                 <input
                   ref={quantityInput}
                   type="number"
                   min={1}
                   defaultValue={1}
-                  className="outline-none w-[50px] text-center transition-transform duration-200 border focus:border-2 rounded-md"
+                  className="outline-none  sm:w-[50px] text-center transition-transform duration-200 border focus:border-2 rounded-md"
                   onFocus={(e) =>
                     (e.currentTarget.style.transform = "scale(1.2)")
                   }
@@ -286,6 +288,7 @@ const ProductPage = () => {
                     }
                   }}
                 />
+
                 <div
                   className="p-2 m-1 hover:bg-yellow-400 rounded-sm flex items-center"
                   onClick={() => {
@@ -297,15 +300,16 @@ const ProductPage = () => {
                 >
                   <FaPlus />
                 </div>
+
               </div>
               <button
-                className="px-12 py-2 bg-[#2094F3] w-full xsm:w-fit text-center rounded-md font-semibold text-white text-nowrap flex items-center"
+                className="px-12 py-2 bg-[#2094F3] w-full xsm:w-fit text-center rounded-md font-semibold text-white text-nowrap flex items-center justify-center"
                 onClick={() => handleAddToCart(true)}
               >
                 Add to Cart
               </button>
               <button
-                className="px-12 py-2 bg-yellow-900 w-full xsm:w-fit text-center rounded-md font-semibold text-white text-nowrap flex items-center"
+                className="px-12 py-2 bg-yellow-900 w-full xsm:w-fit text-center rounded-md font-semibold text-white text-nowrap flex items-center justify-center"
                 onClick={handleByeNow}
               >
                 Buy Now
