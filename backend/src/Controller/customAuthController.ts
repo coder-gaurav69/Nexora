@@ -10,7 +10,7 @@ import { JWT_ACCESS_SECRET_KEY,JWT_REFRESH_SECRET_KEY } from "../config.js";
 const signInController = async (req: Request, res: Response): Promise<any> => {
   try {
     const [accessToken, refreshToken] = tokenGenerator(req.user);
-    const userId = new ObjectId(req.user.customerId);
+    const userId = new ObjectId((req.user as any).customerId);
 
     const updatedUser = await userModel.findByIdAndUpdate(
       userId,
@@ -32,7 +32,7 @@ const signInController = async (req: Request, res: Response): Promise<any> => {
       // secure: true, // enable in production with HTTPS
     };
 
-    const customerId = req.user.customerId;
+    const customerId = (req.user as any).customerId;
     res
       .cookie("accessToken", accessToken, options)
       .cookie("refreshToken", refreshToken, options)
@@ -140,7 +140,7 @@ const logOutController = async (req: Request, res: Response): Promise<any> => {
 
 
 const validateUserAuthController = async (req:Request,res:Response):Promise<any>=>{
-  const {name,email,customerId} = req.user;
+  const {name,email,customerId} = req.user as any;
   res.status(200).json({
     message:"Authorised User",
     success:true,
