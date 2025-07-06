@@ -16,6 +16,6 @@ export const connectMongoDB = () => __awaiter(void 0, void 0, void 0, function* 
         console.log('MongoDB Connected Successfully');
     }
     catch (error) {
-        console.log('Failed to connect mongoD');
+        console.log('Failed to connect mongoDB');
     }
 });
