@@ -38,8 +38,8 @@ app.use('/api', ordersRoute);
 // googleAuth route
 app.use(googleMiddleware);
 app.use('/auth/googleAuth', googleRoute);
-// connecting mongoDB
-connectMongoDB();
 app.listen(PORT, () => {
+    // connecting mongoDB
+    connectMongoDB();
     console.log(`Server is running at http://localhost:${PORT}`);
 });
