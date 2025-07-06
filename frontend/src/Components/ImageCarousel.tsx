@@ -36,7 +36,7 @@ const ImageCarousel: React.FC = () => {
       </Carousel>
 
       {/* Text Overlay */}
-      <div className="absolute bottom-0 md:bottom-7 left-6 transform -translate-y-1/2 z-10 text-left w-[90%] max-w-[700px]">
+      <div className="absolute bottom-0 md:bottom-7 left-6 transform -translate-y-1/2 text-left w-[90%] max-w-[700px]">
         <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-black drop-shadow-md">
           Discover Amazing Products
         </h1>
