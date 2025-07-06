@@ -39,6 +39,7 @@ const ReviewForm = () => {
         "Error submitting review:",
         error.response?.data || error.message
       );
+      setOpenReviewForm(false)
     }
   };
 
