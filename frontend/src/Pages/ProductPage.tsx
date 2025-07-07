@@ -10,10 +10,11 @@ import { Success, Failure } from "../Components/Toast";
 import { GlobalContext } from "../ContextApi/GlobalVariables";
 import ReviewForm from "../Components/Review/ReviewForm";
 import Footer from "../Components/Footer";
+import Product from "../Components/Product";
 
 const ProductPage = () => {
   const { id } = useParams<string>();
-  const { customerId, openReviewForm } = useContext(GlobalContext);
+  const { customerId , showPopup , animateClose} = useContext(GlobalContext);
   const navigate = useNavigate();
 
   type ColorImage = {
@@ -257,7 +258,6 @@ const ProductPage = () => {
 
             <div className="gap-5 my-5 flex flex-col xsm:flex-row">
               <div className="[border:1px_solid_rgba(0,0,0,0.2)] flex w-full justify-between xsm:w-fit rounded-md">
-
                 <div
                   className="m-1 p-2 hover:bg-yellow-400 rounded-sm flex items-center"
                   onClick={() => {
@@ -301,7 +301,6 @@ const ProductPage = () => {
                 >
                   <FaPlus />
                 </div>
-
               </div>
               <button
                 className="px-12 py-2 bg-[#2094F3] w-full xsm:w-fit text-center rounded-md font-semibold text-white text-nowrap flex items-center justify-center"
@@ -324,7 +323,7 @@ const ProductPage = () => {
           </div>
         </div>
 
-        {/* <div className="flex flex-col my-[50px]">
+        <div className="flex flex-col my-[50px]">
           <h1 className="text-3xl font-bold xsm:text-start text-center">
             Related products
           </h1>
@@ -355,7 +354,7 @@ const ProductPage = () => {
               )
             )}
           </div>
-        </div> */}
+        </div>
 
         <div className="my-10">
           <ReviewSection
@@ -372,19 +371,17 @@ const ProductPage = () => {
         </div>
       </div>
 
-      {/* {openReviewForm && (
-        <div className="h-full fixed top-0 left-1/2 -translate-x-1/2 w-full z-20 backdrop-blur-[2px] flex items-center">
-          <ReviewForm />
-        </div>
-      )} */}
-      {openReviewForm && (
-
-        <div className="popup fixed inset-0 z-20 backdrop-blur-[2px] flex items-center justify-center bg-[rgba(0,0,0,0.7)]">
+      {showPopup && (
+        <div
+          className={`${
+            animateClose ? "popup-exit" : "popup"
+          } fixed inset-0 z-20 backdrop-blur-[2px] flex items-center justify-center bg-[rgba(0,0,0,0.7)]`}
+        >
           <ReviewForm />
         </div>
       )}
 
-      <Footer/>
+      <Footer />
     </>
   );
 };

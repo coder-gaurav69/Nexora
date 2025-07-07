@@ -30,6 +30,22 @@ const GlobalProvider = ({ children }: any) => {
   // Ref to manage the interval for auth validation
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
+  // animation for review form
+  const [showPopup, setShowPopup] = useState(false);
+  const [animateClose, setAnimateClose] = useState(false);
+
+  const openPopup = () => {
+    setShowPopup(true);
+    setAnimateClose(false);
+  };
+
+  const closePopup = () => {
+    setAnimateClose(true);
+    setTimeout(() => {
+      setShowPopup(false);
+    }, 300); // Match your animation duration (0.5s)
+  };
+
 
   
 
@@ -129,6 +145,10 @@ const GlobalProvider = ({ children }: any) => {
         setCartDetails,
         isLoggedIn,
         setIsLoggedIn,
+        openPopup,
+        closePopup,
+        showPopup,
+        animateClose
       }}
     >
       {children}

@@ -30,8 +30,9 @@
   animation: border-move 2s linear infinite;
 }
 
+/* Popup Zoom In */
 .popup {
-  animation: zoomIn 0.5s linear forwards;
+  animation: zoomIn 0.3s linear forwards;
   transform-origin: center;
 }
 
@@ -40,15 +41,37 @@
     transform: scale(0);
     opacity: 0;
   }
-  50%{
-     transform: scale(0.5);
-      opacity: 0.5;
+  50% {
+    transform: scale(0.5);
+    opacity: 0.5;
   }
   100% {
     transform: scale(1);
     opacity: 1;
   }
 }
+
+/* Popup Zoom Out */
+.popup-exit {
+  animation: zoomOut 0.3s linear forwards;
+  transform-origin: center;
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
 
 
 

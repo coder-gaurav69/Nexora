@@ -76,9 +76,9 @@ const Home = () => {
     setCategoryCards(uniqueCategoryCards);
   }, [productList]);
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="text-dark">

@@ -10,7 +10,7 @@ const ReviewForm = () => {
   const [images, setImages] = useState<File[]>([]);
   const [name, setName] = useState<string | null>(null);
   const [rating, setRating] = useState<number>(0);
-  const { setOpenReviewForm } = useContext(GlobalContext);
+  const { closePopup } = useContext(GlobalContext);
 
   useEffect(() => {
     console.log({ title, review, images, name, rating });
@@ -33,13 +33,13 @@ const ReviewForm = () => {
         withCredentials: true,
       });
       console.log("Review submitted successfully:", response.data);
-      setOpenReviewForm(false);
+      closePopup();
     } catch (error: any) {
       console.error(
         "Error submitting review:",
         error.response?.data || error.message
       );
-      setOpenReviewForm(false)
+      closePopup()
     }
   };
 
@@ -53,7 +53,7 @@ const ReviewForm = () => {
         <h1 className="font-bold text-2xl">Write a Review</h1>
         <IoClose
           className="font-bold text-4xl hover:scale-110 transition-transform duration-200"
-          onClick={() => setOpenReviewForm(false)}
+          onClick={closePopup}
         />
       </div>
 
@@ -140,7 +140,7 @@ const ReviewForm = () => {
             setImages([]);
             setName(null);
             setRating(0);
-            setOpenReviewForm(false)
+            closePopup();
           }}
         >
           Cancel

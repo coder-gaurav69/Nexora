@@ -25,7 +25,7 @@ const ReviewSection: React.FC<ReviewSectionProps> = ({
   rating,
   ratingBreakdown,
 }) => {
-  const { setOpenReviewForm } = useContext(GlobalContext);
+  const { openPopup } = useContext(GlobalContext);
   const [reviews, setReviews] = useState<reviewType[]>([]);
 
   useEffect(()=>{
@@ -103,7 +103,7 @@ const ReviewSection: React.FC<ReviewSectionProps> = ({
         <div className="flex items-center mx-5 hover:scale-105 transition-transform duration-300">
           <button
             className="text-xl font-semibold text-white bg-blue-600 px-6 py-2 rounded-md lg:w-fit w-full text-nowrap"
-            onClick={() => setOpenReviewForm(true)}
+            onClick={openPopup}
           >
             Write a Review
           </button>
