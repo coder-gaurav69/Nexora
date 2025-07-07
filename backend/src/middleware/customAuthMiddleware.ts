@@ -201,7 +201,7 @@ const validateUserAuthMiddleware = async (req: Request, res: Response, next: Nex
         // 5. Set new access token in cookie
         const options:CookieOptions = {
           httpOnly: true,
-          sameSite: "strict",
+          sameSite: "none",
           secure: true, // enable this in production with HTTPS
         }
         res.cookie("accessToken", newAccessToken, options).cookie("refreshToken",newRefreshToken,options).cookie("customerId",customerId,options)

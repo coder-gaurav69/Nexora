@@ -28,7 +28,7 @@ const signInController = async (req: Request, res: Response): Promise<any> => {
     const options: CookieOptions = {
       httpOnly: true,
       maxAge: 24 * 60 * 60 * 1000, // 1 day
-      sameSite: "strict",
+      sameSite: "none",
       secure: true, // enable in production with HTTPS
     };
 
@@ -124,7 +124,7 @@ const logOutController = async (req: Request, res: Response): Promise<any> => {
   const options: CookieOptions = {
     httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000, // 1 day
-    sameSite: "strict",
+    sameSite: "none",
     secure: true, // enable in production with HTTPS
   };
   res

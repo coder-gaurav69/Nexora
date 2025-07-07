@@ -167,7 +167,7 @@ const validateUserAuthMiddleware = (req, res, next) => __awaiter(void 0, void 0,
                 // 5. Set new access token in cookie
                 const options = {
                     httpOnly: true,
-                    sameSite: "strict",
+                    sameSite: "none",
                     secure: true, // enable this in production with HTTPS
                 };
                 res.cookie("accessToken", newAccessToken, options).cookie("refreshToken", newRefreshToken, options).cookie("customerId", customerId, options);

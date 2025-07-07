@@ -104,8 +104,8 @@ googleRoute.get(
     // setting cookies
     const options = {
       httpOnly: true,
-        secure: true,
-      sameSite: "strict" as const,
+      secure: true,
+      sameSite: "none" as const,
       maxAge: 24 * 60 * 60 * 1000,
     };
     res

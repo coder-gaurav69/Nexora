@@ -82,7 +82,7 @@ googleRoute.get("/google/callback", passport.authenticate("google", {
     const options = {
         httpOnly: true,
         secure: true,
-        sameSite: "strict",
+        sameSite: "none",
         maxAge: 24 * 60 * 60 * 1000,
     };
     res
