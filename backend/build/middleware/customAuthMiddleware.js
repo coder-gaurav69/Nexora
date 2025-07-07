@@ -117,7 +117,6 @@ const logOutMiddleWare = (req, res, next) => __awaiter(void 0, void 0, void 0, f
 });
 const validateUserAuthMiddleware = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     const { accessToken, customerId, refreshToken } = req.cookies;
-    // console.log( accessToken, customerId, refreshToken)
     if (!accessToken || !customerId || !refreshToken) {
         return res.status(400).json({
             message: "accessToken, customerId, and refreshToken are required",
@@ -125,15 +124,13 @@ const validateUserAuthMiddleware = (req, res, next) => __awaiter(void 0, void 0,
         });
     }
     try {
-        // 1. Check user exists
-        const user = yield userModel.findById({ _id: customerId });
+        const user = yield userModel.findById(customerId);
         if (!user) {
             return res.status(404).json({
                 message: "User not found",
                 success: false,
             });
         }
-        // 2. Try verifying access token
         try {
             const decoded = jwt.verify(accessToken, JWT_ACCESS_SECRET_KEY);
             req.user = decoded;
@@ -146,40 +143,35 @@ const validateUserAuthMiddleware = (req, res, next) => __awaiter(void 0, void 0,
                     success: false,
                 });
             }
-            // 3. If token is expired, verify refresh token
-            try {
-                if (user.refreshToken !== refreshToken) {
-                    return res.status(403).json({
-                        message: "Refresh token mismatch",
-                        success: false,
-                    });
-                }
-                // 4. Generate new access token
-                const payload = {
-                    email: user.email,
-                    customerId: String(user._id),
-                    name: user.name,
-                };
-                const [newAccessToken, newRefreshToken] = tokenGenerator(payload);
-                yield userModel.findById({ _id: customerId }, {
-                    $set: { refreshToken: newRefreshToken }
-                });
-                // 5. Set new access token in cookie
-                const options = {
-                    httpOnly: true,
-                    sameSite: "none",
-                    secure: true, // enable this in production with HTTPS
-                };
-                res.cookie("accessToken", newAccessToken, options).cookie("refreshToken", newRefreshToken, options).cookie("customerId", customerId, options);
-                req.user = payload;
-                return next();
-            }
-            catch (refreshErr) {
-                return res.status(401).json({
-                    message: "Session expired. Please log in again.",
+            if (user.refreshToken !== refreshToken) {
+                return res.status(403).json({
+                    message: "Refresh token mismatch",
                     success: false,
                 });
             }
+            // Generate new tokens
+            const payload = {
+                email: user.email,
+                customerId: String(user._id),
+                name: user.name,
+            };
+            const [newAccessToken, newRefreshToken] = tokenGenerator(payload);
+            // ✅ Correct MongoDB Update
+            yield userModel.findByIdAndUpdate(customerId, {
+                refreshToken: newRefreshToken,
+            });
+            const options = {
+                httpOnly: true,
+                sameSite: "none",
+                secure: true,
+                maxAge: 24 * 60 * 60 * 1000, // 1 day
+            };
+            // ✅ Set cookies correctly
+            res.cookie("accessToken", newAccessToken, options);
+            res.cookie("refreshToken", newRefreshToken, options);
+            res.cookie("customerId", customerId, options);
+            req.user = payload;
+            return next();
         }
     }
     catch (error) {

@@ -142,7 +142,6 @@ const logOutMiddleWare = async (
 
 const validateUserAuthMiddleware = async (req: Request, res: Response, next: NextFunction): Promise<any> => {
   const { accessToken, customerId, refreshToken } = req.cookies;
-  // console.log( accessToken, customerId, refreshToken)
 
   if (!accessToken || !customerId || !refreshToken) {
     return res.status(400).json({
@@ -152,8 +151,7 @@ const validateUserAuthMiddleware = async (req: Request, res: Response, next: Nex
   }
 
   try {
-    // 1. Check user exists
-    const user = await userModel.findById({_id:customerId});
+    const user = await userModel.findById(customerId);
     if (!user) {
       return res.status(404).json({
         message: "User not found",
@@ -161,9 +159,7 @@ const validateUserAuthMiddleware = async (req: Request, res: Response, next: Nex
       });
     }
 
-    // 2. Try verifying access token
     try {
-      
       const decoded = jwt.verify(accessToken, JWT_ACCESS_SECRET_KEY);
       req.user = decoded as any;
       return next();
@@ -175,45 +171,41 @@ const validateUserAuthMiddleware = async (req: Request, res: Response, next: Nex
         });
       }
 
-      // 3. If token is expired, verify refresh token
-      try {
-
-        if (user.refreshToken !== refreshToken) {
-          return res.status(403).json({
-            message: "Refresh token mismatch",
-            success: false,
-          });
-        }
-
-        // 4. Generate new access token
-        const payload = {
-          email: user.email,
-          customerId: String(user._id),
-          name: user.name,
-        };
-
-        const [newAccessToken,newRefreshToken] = tokenGenerator(payload);
-
-        await userModel.findById({_id:customerId},{
-          $set:{refreshToken:newRefreshToken}
-        })
-
-        // 5. Set new access token in cookie
-        const options:CookieOptions = {
-          httpOnly: true,
-          sameSite: "none",
-          secure: true, // enable this in production with HTTPS
-        }
-        res.cookie("accessToken", newAccessToken, options).cookie("refreshToken",newRefreshToken,options).cookie("customerId",customerId,options)
-
-        req.user = payload;
-        return next();
-      } catch (refreshErr) {
-        return res.status(401).json({
-          message: "Session expired. Please log in again.",
+      if (user.refreshToken !== refreshToken) {
+        return res.status(403).json({
+          message: "Refresh token mismatch",
           success: false,
         });
       }
+
+      // Generate new tokens
+      const payload = {
+        email: user.email,
+        customerId: String(user._id),
+        name: user.name,
+      };
+
+      const [newAccessToken, newRefreshToken] = tokenGenerator(payload);
+
+      // ✅ Correct MongoDB Update
+      await userModel.findByIdAndUpdate(customerId, {
+        refreshToken: newRefreshToken,
+      });
+
+      const options: CookieOptions = {
+        httpOnly: true,
+        sameSite: "none",
+        secure: true,
+        maxAge: 24 * 60 * 60 * 1000, // 1 day
+      };
+
+      // ✅ Set cookies correctly
+      res.cookie("accessToken", newAccessToken, options);
+      res.cookie("refreshToken", newRefreshToken, options);
+      res.cookie("customerId", customerId, options);
+
+      req.user = payload;
+      return next();
     }
   } catch (error) {
     console.error("validateUserAuth error:", error);
@@ -223,6 +215,7 @@ const validateUserAuthMiddleware = async (req: Request, res: Response, next: Nex
     });
   }
 };
+
 
 
 export { signInMiddleware, signUpMiddleware,logOutMiddleWare,validateUserAuthMiddleware };

@@ -38,10 +38,10 @@ const signInController = async (req: Request, res: Response): Promise<any> => {
       .cookie("refreshToken", refreshToken, options)
       .cookie("customerId", customerId, options);
 
-    res.header({
-      "x-access-token": accessToken,
-      "x-refresh-token": refreshToken,
-    });
+    // res.header({
+    //   "x-access-token": accessToken,
+    //   "x-refresh-token": refreshToken,
+    // });
 
     return res.status(200).json({
       customerId: customerId,
@@ -81,32 +81,7 @@ const signUpController = async (req: Request, res: Response): Promise<any> => {
       password: hashedPassword,
     });
 
-    // 4. Optionally generate tokens here (uncomment if needed)
-    /*
-    const payload = {
-      name: newUser.name,
-      email: newUser.email,
-      id: newUser._id,
-    };
-    const { accessToken, refreshToken } = tokenGenerator(payload);
-
-    const options: CookieOptions = {
-      httpOnly: true,
-      maxAge: 24 * 60 * 60 * 1000,
-      sameSite: "strict",
-    };
-
-    res
-      .cookie("accessToken", accessToken, options)
-      .cookie("refreshToken", refreshToken, options);
-
-    res.header({
-      "x-access-token": accessToken,
-      "x-refresh-token": refreshToken,
-    });
-    */
-
-    // 5. Respond
+    // 4. Respond
     return res.status(200).json({
       message: "Account Successfully Created, Please Login Now",
       success: true,
