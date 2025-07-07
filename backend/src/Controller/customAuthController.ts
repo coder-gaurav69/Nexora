@@ -29,7 +29,7 @@ const signInController = async (req: Request, res: Response): Promise<any> => {
       httpOnly: true,
       maxAge: 24 * 60 * 60 * 1000, // 1 day
       sameSite: "strict",
-      // secure: true, // enable in production with HTTPS
+      secure: true, // enable in production with HTTPS
     };
 
     const customerId = (req.user as any).customerId;
@@ -125,7 +125,7 @@ const logOutController = async (req: Request, res: Response): Promise<any> => {
     httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000, // 1 day
     sameSite: "strict",
-    // secure: true, // enable in production with HTTPS
+    secure: true, // enable in production with HTTPS
   };
   res
     .clearCookie("accessToken", options)

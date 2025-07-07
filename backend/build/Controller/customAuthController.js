@@ -26,7 +26,7 @@ const signInController = (req, res) => __awaiter(void 0, void 0, void 0, functio
             httpOnly: true,
             maxAge: 24 * 60 * 60 * 1000, // 1 day
             sameSite: "strict",
-            // secure: true, // enable in production with HTTPS
+            secure: true, // enable in production with HTTPS
         };
         const customerId = req.user.customerId;
         res
@@ -114,7 +114,7 @@ const logOutController = (req, res) => __awaiter(void 0, void 0, void 0, functio
         httpOnly: true,
         maxAge: 24 * 60 * 60 * 1000, // 1 day
         sameSite: "strict",
-        // secure: true, // enable in production with HTTPS
+        secure: true, // enable in production with HTTPS
     };
     res
         .clearCookie("accessToken", options)

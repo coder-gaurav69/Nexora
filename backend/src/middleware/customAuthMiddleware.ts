@@ -202,7 +202,7 @@ const validateUserAuthMiddleware = async (req: Request, res: Response, next: Nex
         const options:CookieOptions = {
           httpOnly: true,
           sameSite: "strict",
-          // secure: true, // enable this in production with HTTPS
+          secure: true, // enable this in production with HTTPS
         }
         res.cookie("accessToken", newAccessToken, options).cookie("refreshToken",newRefreshToken,options).cookie("customerId",customerId,options)
 

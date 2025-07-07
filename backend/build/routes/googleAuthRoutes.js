@@ -81,7 +81,7 @@ googleRoute.get("/google/callback", passport.authenticate("google", {
     // setting cookies
     const options = {
         httpOnly: true,
-        //   secure: true,
+        secure: true,
         sameSite: "strict",
         maxAge: 24 * 60 * 60 * 1000,
     };

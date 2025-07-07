@@ -12,7 +12,6 @@ import OrderConfirmation from "./Components/OrderConfirmation";
 import {Toaster} from 'sonner'
 import Auth from "./Pages/Auth";
 import Contact from "./Pages/Contact";
-import { useEffect } from "react";
 
 const App = () => {
   return (
