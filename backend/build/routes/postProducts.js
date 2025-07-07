@@ -72,7 +72,9 @@ postRoute.post("/add-product", upload.any(), (req, res) => __awaiter(void 0, voi
         const productName = (_a = productData.productName) === null || _a === void 0 ? void 0 : _a.trim();
         // 1. Validate product name
         if (!productName) {
-            return res.status(400).json({ message: "Product name is required", success: false });
+            return res
+                .status(400)
+                .json({ message: "Product name is required", success: false });
         }
         // 2. Check if product already exists (avoid duplicates)
         const existingProduct = yield productModel.findOne({ productName });
@@ -136,7 +138,7 @@ postRoute.post("/add-product", upload.any(), (req, res) => __awaiter(void 0, voi
 }));
 // route for adding products to carts
 postRoute.post("/add-cart-product", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { customerId, productId, productName, quantity, price, imageLink, category } = req.body;
+    const { customerId, productId, productName, quantity, price, imageLink, category, } = req.body;
     // console.log(customerId, productId, productName, quantity, price, imageLink,category);
     //  1. Validate required fields
     if (!customerId ||
@@ -171,7 +173,7 @@ postRoute.post("/add-cart-product", (req, res) => __awaiter(void 0, void 0, void
             quantity,
             price,
             imageLink,
-            category
+            category,
         });
         return res.status(200).json({
             message: "Product added to cart successfully.",
@@ -192,6 +194,7 @@ postRoute.post("/add-cart-product", (req, res) => __awaiter(void 0, void 0, void
 postRoute.post("/post-review", upload.any(), (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { customerId, productId, rating, name, title, review } = req.body;
     const files = req.files;
+    console.log(customerId, productId, rating, name, title, review);
     // ✅ Validate required fields
     if (!customerId || !productId || !rating || !name || !title || !review) {
         return res.status(400).json({

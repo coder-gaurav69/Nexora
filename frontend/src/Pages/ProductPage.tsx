@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect, useContext } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import {useNavigate, useParams } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import { IoMdStar, IoMdStarOutline } from "react-icons/io";
 import { FaCheck, FaPlus, FaMinus } from "react-icons/fa6";
@@ -14,8 +14,10 @@ import Product from "../Components/Product";
 
 const ProductPage = () => {
   const { id } = useParams<string>();
+  console.log(id)
   const { customerId , showPopup , animateClose} = useContext(GlobalContext);
   const navigate = useNavigate();
+
 
   type ColorImage = {
     color: string;
@@ -367,6 +369,7 @@ const ProductPage = () => {
               { stars: 2, percentage: 5 },
               { stars: 1, percentage: 3 },
             ]}
+            id={id as string}
           />
         </div>
       </div>
@@ -377,7 +380,7 @@ const ProductPage = () => {
             animateClose ? "popup-exit" : "popup"
           } fixed inset-0 z-20 backdrop-blur-[2px] flex items-center justify-center bg-[rgba(0,0,0,0.7)]`}
         >
-          <ReviewForm />
+          <ReviewForm id={id as string}/>
         </div>
       )}
 

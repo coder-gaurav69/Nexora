@@ -32,12 +32,13 @@ const reviewSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    date: { type: Date, default: Date.now }
   },
   { timestamps: true }
 );
 
 // Ensure user can review each product only once
-reviewSchema.index({ customerID: 1, productId: 1 }, { unique: true });
+reviewSchema.index({ customerId: 1, productId: 1 }, { unique: true });
 
 const reviewModel = mongoose.model("Reviews", reviewSchema);
 export default reviewModel;

@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { IoMdStar, IoMdStarHalf, IoMdStarOutline } from 'react-icons/io';
 
-const StarRatingWithTouch: React.FC = () => {
-  const [rating, setRating] = useState<number>(0);
+interface StarRatingProps {
+  rating: number;
+  setRating: React.Dispatch<React.SetStateAction<number>>;
+}
 
+const StarRatingWithTouch: React.FC<StarRatingProps> = ({ rating, setRating }) => {
   const handleClick = (
     event: React.MouseEvent<HTMLSpanElement> | React.TouchEvent<HTMLSpanElement>,
     starValue: number

@@ -1,36 +1,42 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import StarRatingWithTouch from "./StarRatingWithTouch";
 import { IoClose } from "react-icons/io5";
 import { GlobalContext } from "../../ContextApi/GlobalVariables";
 import axios from "axios";
 
-const ReviewForm = () => {
+
+const ReviewForm = ({id}:{id:string}) => {
   const [title, setTitle] = useState<string | null>(null);
   const [review, setReview] = useState<string | null>(null);
   const [images, setImages] = useState<File[]>([]);
   const [name, setName] = useState<string | null>(null);
   const [rating, setRating] = useState<number>(0);
-  const { closePopup } = useContext(GlobalContext);
-
-  useEffect(() => {
-    console.log({ title, review, images, name, rating });
-  }, [title, review, images, name, rating]);
+  const { closePopup, customerId } = useContext(GlobalContext);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const url = `${import.meta.env.VITE_BACKEND_URL}/api/post-review`;
-    const payload = {
-      title,
-      review,
-      images,
-      name,
-      rating,
-    };
+    const formData = new FormData();
+    formData.append("title", title as string);
+    formData.append("review", review as string);
+    formData.append("name", name as string);
+    formData.append("rating", rating.toString());
+    formData.append("customerId", customerId);
+    formData.append("productId", id as any);
+    // formData.append("date", new Date().toLocaleString());
+
+    // Append all images
+    images.forEach((image) => {
+      formData.append("productReviewImages", image);
+    });
 
     try {
-      const response = await axios.post(url, payload, {
+      const url = `${import.meta.env.VITE_BACKEND_URL}/api/post-review`;
+      const response = await axios.post(url, formData, {
         withCredentials: true,
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
       });
       console.log("Review submitted successfully:", response.data);
       closePopup();
@@ -39,7 +45,7 @@ const ReviewForm = () => {
         "Error submitting review:",
         error.response?.data || error.message
       );
-      closePopup()
+      closePopup();
     }
   };
 
@@ -59,7 +65,7 @@ const ReviewForm = () => {
 
       {/* Star Rating */}
       <h2 className="font-semibold text-[rgba(0,0,0,0.8)]">Overall Rating *</h2>
-      <StarRatingWithTouch />
+      <StarRatingWithTouch setRating={setRating} rating={rating} />
 
       {/* Review Title */}
       <label htmlFor="title" className="font-semibold text-[rgba(0,0,0,0.8)]">
@@ -140,7 +146,7 @@ const ReviewForm = () => {
             setImages([]);
             setName(null);
             setRating(0);
-            closePopup();
+            closePopup(false);
           }}
         >
           Cancel

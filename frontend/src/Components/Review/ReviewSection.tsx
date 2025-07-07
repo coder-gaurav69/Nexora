@@ -9,6 +9,7 @@ interface ReviewSectionProps {
   productName: string;
   rating: string;
   ratingBreakdown: { stars: number; percentage: number }[];
+  id:string
 }
 
 type reviewType = {
@@ -24,6 +25,7 @@ const ReviewSection: React.FC<ReviewSectionProps> = ({
   productName,
   rating,
   ratingBreakdown,
+  id
 }) => {
   const { openPopup } = useContext(GlobalContext);
   const [reviews, setReviews] = useState<reviewType[]>([]);
@@ -31,7 +33,7 @@ const ReviewSection: React.FC<ReviewSectionProps> = ({
   useEffect(()=>{
     const loadReviews = async ()=>{
       try {
-        const url = `${import.meta.env.VITE_BACKEND_URL}/api/reviews`;
+        const url = `${import.meta.env.VITE_BACKEND_URL}/api/reviews?productId=${id}`;
         const response = ((await axios.get(url,{withCredentials:true})).data as any)?.data;
         console.log(response)
         setReviews(response)
@@ -40,13 +42,7 @@ const ReviewSection: React.FC<ReviewSectionProps> = ({
       }
     }
     loadReviews()
-  },[])
-
-
-
-
-
-
+  },[id])
 
   return (
     <div className="w-[100%] my-10 flex flex-col m-auto">
@@ -120,7 +116,7 @@ const ReviewSection: React.FC<ReviewSectionProps> = ({
               review={review}
               productReviewImages={productReviewImages}
               rating={rating}
-              date={date}
+              date={(new Date(date) as any).toLocaleString()}
             />
           </div>
         )

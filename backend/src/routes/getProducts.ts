@@ -67,13 +67,16 @@ getRoute.get("/products", async (req: Request, res: Response) => {
 // GET /api/reviews?customerId=123
 // GET /api/reviews            → to get all reviews
 getRoute.get("/reviews", async (req: Request, res: Response): Promise<any> => {
-  const { customerId } = req.query;
+  const { customerId,productId } = req.query;
 
   try {
     let filter: any = {};
 
     if (customerId) {
       filter.customerId = customerId;
+    }
+    if(productId){
+      filter.productId = productId;
     }
 
     const reviews = await reviewModel.find(filter);

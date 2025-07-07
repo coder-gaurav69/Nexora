@@ -65,11 +65,14 @@ getRoute.get("/products", (req, res) => __awaiter(void 0, void 0, void 0, functi
 // GET /api/reviews?customerId=123
 // GET /api/reviews            → to get all reviews
 getRoute.get("/reviews", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { customerId } = req.query;
+    const { customerId, productId } = req.query;
     try {
         let filter = {};
         if (customerId) {
             filter.customerId = customerId;
+        }
+        if (productId) {
+            filter.productId = productId;
         }
         const reviews = yield reviewModel.find(filter);
         if (reviews.length > 0) {

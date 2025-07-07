@@ -78,7 +78,9 @@ postRoute.post(
 
       // 1. Validate product name
       if (!productName) {
-        return res.status(400).json({ message: "Product name is required", success: false });
+        return res
+          .status(400)
+          .json({ message: "Product name is required", success: false });
       }
 
       // 2. Check if product already exists (avoid duplicates)
@@ -104,7 +106,9 @@ postRoute.post(
       for (const file of files) {
         const color = file.fieldname.trim(); // e.g., "red"
 
-        const base64 = `data:${file.mimetype};base64,${file.buffer.toString("base64")}`;
+        const base64 = `data:${file.mimetype};base64,${file.buffer.toString(
+          "base64"
+        )}`;
 
         try {
           const uploadResult = await cloudinary.uploader.upload(base64, {
@@ -157,8 +161,15 @@ postRoute.post(
 postRoute.post(
   "/add-cart-product",
   async (req: Request, res: Response): Promise<any> => {
-    const { customerId, productId, productName, quantity, price, imageLink , category} =
-      req.body;
+    const {
+      customerId,
+      productId,
+      productName,
+      quantity,
+      price,
+      imageLink,
+      category,
+    } = req.body;
     // console.log(customerId, productId, productName, quantity, price, imageLink,category);
     //  1. Validate required fields
     if (
@@ -199,7 +210,7 @@ postRoute.post(
         quantity,
         price,
         imageLink,
-        category
+        category,
       });
 
       return res.status(200).json({
@@ -223,8 +234,9 @@ postRoute.post(
   "/post-review",
   upload.any(),
   async (req: Request, res: Response): Promise<any> => {
-    const { customerId, productId, rating, name, title, review } = req.body;
+    const { customerId, productId, rating, name, title, review} = req.body;
     const files = req.files as Express.Multer.File[];
+    console.log(customerId, productId, rating, name, title, review);
 
     // ✅ Validate required fields
     if (!customerId || !productId || !rating || !name || !title || !review) {
