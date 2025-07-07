@@ -76,6 +76,10 @@ const Home = () => {
     setCategoryCards(uniqueCategoryCards);
   }, [productList]);
 
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
+
   return (
     <div className="text-dark">
       <Navbar />
@@ -136,7 +140,7 @@ const Home = () => {
       </div>
 
       {/* Footer */}
-      <Footer/>
+      <Footer />
     </div>
   );
 };

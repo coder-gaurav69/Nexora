@@ -9,6 +9,7 @@ import BreadcrumbNavigation from "../Components/BreadcumNavigation";
 import { Success, Failure } from "../Components/Toast";
 import { GlobalContext } from "../ContextApi/GlobalVariables";
 import ReviewForm from "../Components/Review/ReviewForm";
+import Footer from "../Components/Footer";
 
 const ProductPage = () => {
   const { id } = useParams<string>();
@@ -382,6 +383,8 @@ const ProductPage = () => {
           <ReviewForm />
         </div>
       )}
+
+      <Footer/>
     </>
   );
 };

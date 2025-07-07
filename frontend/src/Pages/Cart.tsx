@@ -6,6 +6,7 @@ import { GlobalContext } from "../ContextApi/GlobalVariables";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Success,Failure } from "../Components/Toast";
+import Footer from "../Components/Footer";
 
 
 type CartItem = {
@@ -283,6 +284,7 @@ const Cart = () => {
           </div>
         )}
       </div>
+      <Footer/>
     </>
   );
 };

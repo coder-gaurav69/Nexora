@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import {useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import Product from "../Components/Product";
 import axios from "axios";
 import BreadcrumbNavigation from "../Components/BreadcumNavigation";
+import Footer from "../Components/Footer";
 
 const ProductsByCategory = () => {
   const { selectedCategory } = useParams<string>();
@@ -279,6 +280,7 @@ const ProductsByCategory = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
