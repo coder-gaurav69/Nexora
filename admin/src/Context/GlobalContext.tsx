@@ -11,7 +11,7 @@ interface GlobalContextType {
 const GlobalContext = createContext<GlobalContextType | null>(null);
 
 const GlobalProvider = ({ children }: { children: any }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(true);
   const [customerId, setCustomerId] = useState<string>("");
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
