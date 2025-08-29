@@ -28,7 +28,7 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
             <span className="bg-blue-100 p-2 rounded-md">
-              <img src="/favicon.ico" alt="Nexora" className="w-6 h-6" />
+              <img src="logo.ico" alt="Nexora" className="w-6 h-6" />
             </span>
             Nexora
           </h3>

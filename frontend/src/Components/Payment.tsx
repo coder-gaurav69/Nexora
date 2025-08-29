@@ -66,19 +66,20 @@ const Payment = () => {
   const [isCashOnDelivery, setIsCashOnDelivery] = useState(false);
   const [userInfo, setUserInfo] = useState<userType>();
 
-
-  useEffect(()=>{
-    const handlePaymentInfo = async ()=>{
-      const url = `http://localhost:3000/api/userDetails?customerId=${customerId}`;
-      const response = ((await axios.get(url,{withCredentials:true})).data as any)?.data[0];
+  useEffect(() => {
+    const handlePaymentInfo = async () => {
+      const url = `${import.meta.env.VITE_BACKEND_URL}/api/userDetails?customerId=${customerId}`;
+      const response = (
+        (await axios.get(url, { withCredentials: true })).data as any
+      )?.data[0];
       setUserInfo({
-        name:response.name,
-        email:response.email,
-        contact:"8287291613"
-      })
-    }
+        name: response.name,
+        email: response.email,
+        contact: "8287291613",
+      });
+    };
     handlePaymentInfo();
-  },[])
+  }, []);
 
   const loadRazorpay = (src: string): Promise<boolean> => {
     return new Promise((resolve) => {
@@ -91,85 +92,78 @@ const Payment = () => {
   };
 
   const handlePayment = async (): Promise<void> => {
-  const res = await loadRazorpay(
-    "https://checkout.razorpay.com/v1/checkout.js"
-  );
-  if (!res) {
-    alert("Razorpay SDK failed to load");
-    return;
-  }
-
-  const totalAmount = (
-    cartDetails.reduce((acc, item) => acc + item.price * item.quantity, 0) + 12
-  ).toFixed(2);
-
-  try {
-    const orderId = localStorage.getItem("orderId");
-    if (!orderId) {
-      alert("Order ID not found.");
+    const res = await loadRazorpay(
+      "https://checkout.razorpay.com/v1/checkout.js"
+    );
+    if (!res) {
+      alert("Razorpay SDK failed to load");
       return;
     }
 
-    // // ✅ First check payment status before initiating payment
-    // const url = `http://localhost:3000/api/getOrderDetails?orderId=${orderId}`;
-    // const orderRes = await axios.get(url, { withCredentials: true });
-    // const orderData = (orderRes.data as any)?.data[0];
+    const totalAmount = (
+      cartDetails.reduce((acc, item) => acc + item.price * item.quantity, 0) +
+      12
+    ).toFixed(2);
 
-    // if (orderData?.paymentInfo?.status === "Completed") {
-    //   alert("Payment for this product has already been done.");
-    //   return;
-    // }
+    try {
+      const orderId = localStorage.getItem("orderId");
+      if (!orderId) {
+        alert("Order ID not found.");
+        return;
+      }
 
-    // ✅ Proceed to create new order and payment
-    const createOrderUrl = `${import.meta.env.VITE_BACKEND_URL}/api/razorpay/create-order`;
-    const result = await axios.post(createOrderUrl, { amount: totalAmount });
-    const data: any = result.data;
+      // ✅ Proceed to create new order and payment
+      const createOrderUrl = `${
+        import.meta.env.VITE_BACKEND_URL
+      }/api/razorpay/create-order`;
+      const result = await axios.post(createOrderUrl, { amount: totalAmount });
+      const data: any = result.data;
 
-    const options = {
-      key: import.meta.env.VITE_TEST_KEY_ID,
-      amount: data.amount,
-      currency: data.currency,
-      name: "Nexora",
-      description: "Test Transaction",
-      order_id: data.id,
-      handler: async function (response: any) {
-        try {
-          const verifyUrl = `${import.meta.env.VITE_BACKEND_URL}/api/razorpay/verify`;
-          const verifyRes = await axios.post(verifyUrl, response);
-          const verifyData: any = verifyRes.data;
+      const options = {
+        key: import.meta.env.VITE_TEST_KEY_ID,
+        amount: data.amount,
+        currency: data.currency,
+        name: "Nexora",
+        description: "Test Transaction",
+        order_id: data.id,
+        handler: async function (response: any) {
+          try {
+            const verifyUrl = `${
+              import.meta.env.VITE_BACKEND_URL
+            }/api/razorpay/verify`;
+            const verifyRes = await axios.post(verifyUrl, response);
+            const verifyData: any = verifyRes.data;
 
-          if (verifyData.success) {
-            navigate("/confirmation");
-          } else {
-            alert("Payment verification failed");
+            if (verifyData.success) {
+              navigate("/confirmation");
+            } else {
+              alert("Payment verification failed");
+            }
+          } catch (err) {
+            console.error("Verification error:", err);
+            alert("An error occurred while verifying payment.");
           }
-        } catch (err) {
-          console.error("Verification error:", err);
-          alert("An error occurred while verifying payment.");
-        }
-      },
-      prefill: {
-        name: userInfo?.name,
-        email: userInfo?.email,
-        contact: userInfo?.contact,
-      },
-      notes: {
-        address: "Razorpay Corporate Office",
-      },
-      theme: {
-        color: "#3399cc",
-      },
-    };
+        },
+        prefill: {
+          name: userInfo?.name,
+          email: userInfo?.email,
+          contact: userInfo?.contact,
+        },
+        notes: {
+          address: "Razorpay Corporate Office",
+        },
+        theme: {
+          color: "#3399cc",
+        },
+      };
 
-    const rzp = new window.Razorpay(options);
-    rzp.open();
-  } catch (err) {
-    console.error("Payment flow error:", err);
-    alert("An error occurred. Please try again.");
-  }
-};
-
-
+      const rzp = new window.Razorpay(options);
+      rzp.open();
+    } catch (err) {
+      console.error("Payment flow error:", err);
+      alert("An error occurred. Please try again.");
+    }
+  };
 
   const handleCOD = async () => {
     try {
