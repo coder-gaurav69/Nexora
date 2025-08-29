@@ -9,6 +9,7 @@ import {
   GOOGLE_CLIENT_SECRET,
   GOOGLE_CALLBACK_URL,
   FRONTEND_URL,
+  MODE
 } from "../config.js";
 import userModel from "../mongoose/Schemas/userSchema.js";
 
@@ -105,13 +106,13 @@ googleRoute.get(
     const options = {
       httpOnly: true,
       secure: true,
-      sameSite: "none" as const,
+      sameSite: MODE==="development"?"strict":"none",
       maxAge: 24 * 60 * 60 * 1000,
     };
     res
-      .cookie("accessToken", accessToken, options)
-      .cookie("refreshToken", refreshToken, options)
-      .cookie("customerId", customerId, options);
+      .cookie("accessToken", accessToken, options as any)
+      .cookie("refreshToken", refreshToken, options as any)
+      .cookie("customerId", customerId, options as any);
 
     console.log("Login successfully with Google");
     res.redirect(`${FRONTEND_URL}`);

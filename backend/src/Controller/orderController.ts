@@ -120,7 +120,54 @@ const updateOrderController = async (
   }
 };
 
-export default updateOrderController;
+const updateOrderStatus = async (req: Request, res: Response): Promise<any> => {
+  const { orderId, status } = req.body;
+  console.log(orderId,status)
+
+  if (!orderId || !status) {
+    return res.status(400).json({
+      success: false,
+      message: "orderId and status are required!",
+    });
+  }
+
+  try {
+    const id = new ObjectId(orderId);
+    if(status === "Delivered"){
+      const updatedOrder = await userOrderSchema.findByIdAndUpdate(
+      id,
+      { $set: { orderStatus: status ,"paymentInfo.status":"Completed"} },
+      { new: true }
+    );
+    }
+    const updatedOrder = await userOrderSchema.findByIdAndUpdate(
+      id,
+      { $set: { orderStatus: status } },
+      { new: true }
+    );
+
+    if (!updatedOrder) {
+      return res.status(404).json({
+        success: false,
+        message: "Order not found!",
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      message: "Order status updated successfully!",
+      data: updatedOrder,
+    });
+
+  } catch (error) {
+    console.error("Error updating order status:", error);
+    return res.status(500).json({
+      success: false,
+      message: "Something went wrong while updating order status.",
+    });
+  }
+};
 
 
-export { getOrderController, orderController, updateOrderController };
+
+export { getOrderController, orderController, updateOrderController,updateOrderStatus };

@@ -7,19 +7,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { tokenGenerator } from "./tokenGenerator.js";
-import userModel from "../mongoose/Schemas/userSchema.js";
+import { tokenGenerator } from "../Controller/tokenGenerator.js";
 import { ObjectId } from "mongodb";
 import bcrypt from "bcrypt";
 import { MODE } from "../config.js";
-const signInController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+import adminModel from "../mongoose/Schemas/adminSchema.js";
+const adminSignInController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const [accessToken, refreshToken] = tokenGenerator(req.user);
-        const userId = new ObjectId(req.user.customerId);
-        const updatedUser = yield userModel.findByIdAndUpdate(userId, { $set: { refreshToken } }, { new: true });
-        if (!updatedUser) {
+        const adminId = new ObjectId(req.user.adminId);
+        const updatedAdmin = yield adminModel.findByIdAndUpdate(adminId, { $set: { refreshToken } }, { new: true });
+        if (!updatedAdmin) {
             return res.status(404).json({
-                message: "User not found",
+                message: "Admin not found",
                 success: false,
             });
         }
@@ -27,87 +27,81 @@ const signInController = (req, res) => __awaiter(void 0, void 0, void 0, functio
             httpOnly: true,
             maxAge: 24 * 60 * 60 * 1000, // 1 day
             sameSite: MODE === "development" ? "strict" : "none",
-            secure: true, // enable in production with HTTPS
+            secure: true,
         };
-        const customerId = req.user.customerId;
+        const adminIdStr = req.user.adminId;
         res
             .cookie("accessToken", accessToken, options)
             .cookie("refreshToken", refreshToken, options)
-            .cookie("customerId", customerId, options);
-        // res.header({
-        //   "x-access-token": accessToken,
-        //   "x-refresh-token": refreshToken,
-        // });
+            .cookie("adminId", adminIdStr, options);
         return res.status(200).json({
-            customerId: customerId,
+            adminId: adminIdStr,
             message: "Successfully Logged In",
             success: true,
         });
     }
     catch (error) {
-        console.error("SignIn Error:", error);
+        console.error("Admin SignIn Error:", error);
         return res.status(500).json({
             message: "Internal Server Error",
             success: false,
         });
     }
 });
-const signUpController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+const adminSignUpController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { name, email, password } = req.body;
     try {
-        // 1. Check if user already exists
-        const existingUser = yield userModel.findOne({ email });
-        if (existingUser) {
+        const existingAdmin = yield adminModel.findOne({ email });
+        if (existingAdmin) {
             return res.status(400).json({
-                message: "User already exists with this email",
+                message: "Admin already exists with this email",
                 success: false,
             });
         }
-        // 2. Hash the password
         const salt = 10;
         const hashedPassword = yield bcrypt.hash(password, salt);
-        // 3. Create new user
-        const newUser = yield userModel.create({
+        const newAdmin = yield adminModel.create({
             name,
             email,
             password: hashedPassword,
+            role: "admin",
         });
-        // 4. Respond
         return res.status(200).json({
-            message: "Account Successfully Created, Please Login Now",
+            message: "Admin Account Created Successfully",
             success: true,
         });
     }
     catch (err) {
-        console.error("Signup error:", err);
+        console.error("Admin Signup error:", err);
         return res.status(500).json({
             message: "Internal Server Error",
             success: false,
         });
     }
 });
-const logOutController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+const adminLogOutController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const options = {
         httpOnly: true,
-        maxAge: 24 * 60 * 60 * 1000, // 1 day
+        maxAge: 24 * 60 * 60 * 1000,
         sameSite: MODE === "development" ? "strict" : "none",
-        secure: true, // enable in production with HTTPS
+        secure: true,
     };
     res
         .clearCookie("accessToken", options)
         .clearCookie("refreshToken", options)
-        .clearCookie("customerId", options);
+        .clearCookie("adminId", options);
     return res.status(200).json({
-        message: "Logout Successfully",
+        message: "Admin Logout Successfully",
         success: true,
     });
 });
-const validateUserAuthController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { name, email, customerId } = req.user;
+const validateAdminAuthController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { name, email, adminId, role } = req.user;
     res.status(200).json({
-        message: "Authorised User",
+        message: "Authorized Admin",
         success: true,
-        customerId: customerId
+        adminId: adminId,
+        role: role,
     });
 });
-export { signInController, signUpController, logOutController, validateUserAuthController };
+export { adminSignInController, adminSignUpController, adminLogOutController, validateAdminAuthController, };

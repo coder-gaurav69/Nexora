@@ -294,6 +294,7 @@ postRoute.delete(
   "/deleteProduct",
   async (req: Request, res: Response): Promise<any> => {
     const { productId } = req.body;
+    console.log(productId)
     if (!productId) {
       return res.status(400).json({
         message: "productId is required!",

@@ -5,7 +5,7 @@ import userModel from "../mongoose/Schemas/userSchema.js";
 import { ObjectId } from "mongodb";
 import bcrypt from "bcrypt";
 import jwt  from "jsonwebtoken";
-import { JWT_ACCESS_SECRET_KEY,JWT_REFRESH_SECRET_KEY } from "../config.js";
+import { JWT_ACCESS_SECRET_KEY,JWT_REFRESH_SECRET_KEY ,MODE} from "../config.js";
 
 const signInController = async (req: Request, res: Response): Promise<any> => {
   try {
@@ -28,7 +28,7 @@ const signInController = async (req: Request, res: Response): Promise<any> => {
     const options: CookieOptions = {
       httpOnly: true,
       maxAge: 24 * 60 * 60 * 1000, // 1 day
-      sameSite: "none",
+      sameSite: MODE==="development"?"strict":"none",
       secure: true, // enable in production with HTTPS
     };
 
@@ -99,7 +99,7 @@ const logOutController = async (req: Request, res: Response): Promise<any> => {
   const options: CookieOptions = {
     httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000, // 1 day
-    sameSite: "none",
+    sameSite: MODE==="development"?"strict":"none",
     secure: true, // enable in production with HTTPS
   };
   res

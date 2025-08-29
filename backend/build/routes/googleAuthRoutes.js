@@ -12,7 +12,7 @@ import passport from "passport";
 import { Strategy as GoogleStrategy } from "passport-google-oauth20";
 import cookieParser from "cookie-parser";
 import { tokenGenerator } from "../Controller/tokenGenerator.js";
-import { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CALLBACK_URL, FRONTEND_URL, } from "../config.js";
+import { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_CALLBACK_URL, FRONTEND_URL, MODE } from "../config.js";
 import userModel from "../mongoose/Schemas/userSchema.js";
 const googleRoute = express.Router();
 // =================== Passport Config ===================
@@ -82,7 +82,7 @@ googleRoute.get("/google/callback", passport.authenticate("google", {
     const options = {
         httpOnly: true,
         secure: true,
-        sameSite: "none",
+        sameSite: MODE === "development" ? "strict" : "none",
         maxAge: 24 * 60 * 60 * 1000,
     };
     res

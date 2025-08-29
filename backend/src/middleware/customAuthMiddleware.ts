@@ -2,7 +2,7 @@ import express, { Request, Response, NextFunction, CookieOptions } from "express
 import userModel from "../mongoose/Schemas/userSchema.js";
 import bcrypt from "bcrypt";
 import { ObjectId } from "mongodb";
-import { JWT_ACCESS_SECRET_KEY,JWT_REFRESH_SECRET_KEY } from "../config.js";
+import { JWT_ACCESS_SECRET_KEY,JWT_REFRESH_SECRET_KEY,MODE } from "../config.js";
 import  jwt  from "jsonwebtoken";
 import { tokenGenerator } from "../Controller/tokenGenerator.js";
 
@@ -194,7 +194,7 @@ const validateUserAuthMiddleware = async (req: Request, res: Response, next: Nex
 
       const options: CookieOptions = {
         httpOnly: true,
-        sameSite: "none",
+        sameSite: MODE==="development"?"strict":"none",
         secure: true,
         maxAge: 24 * 60 * 60 * 1000, // 1 day
       };

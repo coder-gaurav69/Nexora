@@ -38,7 +38,7 @@ razorPayRoute.post('/verify', (req, res) => {
     hmac.update(razorpay_order_id + "|" + razorpay_payment_id);
     const generated_signature = hmac.digest('hex');
     if (generated_signature === razorpay_signature) {
-        console.log('verify hit hua');
+        // console.log('verify hit hua')
         res.json({ success: true });
     }
     else {

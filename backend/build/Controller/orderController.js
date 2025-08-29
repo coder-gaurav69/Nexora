@@ -109,5 +109,39 @@ const updateOrderController = (req, res) => __awaiter(void 0, void 0, void 0, fu
         });
     }
 });
-export default updateOrderController;
-export { getOrderController, orderController, updateOrderController };
+const updateOrderStatus = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { orderId, status } = req.body;
+    console.log(orderId, status);
+    if (!orderId || !status) {
+        return res.status(400).json({
+            success: false,
+            message: "orderId and status are required!",
+        });
+    }
+    try {
+        const id = new ObjectId(orderId);
+        if (status === "Delivered") {
+            const updatedOrder = yield userOrderSchema.findByIdAndUpdate(id, { $set: { orderStatus: status, "paymentInfo.status": "Completed" } }, { new: true });
+        }
+        const updatedOrder = yield userOrderSchema.findByIdAndUpdate(id, { $set: { orderStatus: status } }, { new: true });
+        if (!updatedOrder) {
+            return res.status(404).json({
+                success: false,
+                message: "Order not found!",
+            });
+        }
+        return res.status(200).json({
+            success: true,
+            message: "Order status updated successfully!",
+            data: updatedOrder,
+        });
+    }
+    catch (error) {
+        console.error("Error updating order status:", error);
+        return res.status(500).json({
+            success: false,
+            message: "Something went wrong while updating order status.",
+        });
+    }
+});
+export { getOrderController, orderController, updateOrderController, updateOrderStatus };

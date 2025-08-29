@@ -35,7 +35,7 @@ razorPayRoute.post('/verify', (req, res) => {
   const generated_signature = hmac.digest('hex');
 
   if (generated_signature === razorpay_signature) {
-    console.log('verify hit hua')
+    // console.log('verify hit hua')
     res.json({ success: true });
   } else {
     res.status(400).json({ success: false, message: 'Invalid signature' });

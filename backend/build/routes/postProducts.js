@@ -240,6 +240,7 @@ postRoute.post("/post-review", upload.any(), (req, res) => __awaiter(void 0, voi
 // route to delete a product
 postRoute.delete("/deleteProduct", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { productId } = req.body;
+    console.log(productId);
     if (!productId) {
         return res.status(400).json({
             message: "productId is required!",

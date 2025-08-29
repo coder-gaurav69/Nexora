@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 import userModel from "../mongoose/Schemas/userSchema.js";
 import bcrypt from "bcrypt";
 import { ObjectId } from "mongodb";
-import { JWT_ACCESS_SECRET_KEY } from "../config.js";
+import { JWT_ACCESS_SECRET_KEY, MODE } from "../config.js";
 import jwt from "jsonwebtoken";
 import { tokenGenerator } from "../Controller/tokenGenerator.js";
 // Sign In Middleware
@@ -162,7 +162,7 @@ const validateUserAuthMiddleware = (req, res, next) => __awaiter(void 0, void 0,
             });
             const options = {
                 httpOnly: true,
-                sameSite: "none",
+                sameSite: MODE === "development" ? "strict" : "none",
                 secure: true,
                 maxAge: 24 * 60 * 60 * 1000, // 1 day
             };
