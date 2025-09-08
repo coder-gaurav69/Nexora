@@ -1,3 +1,5 @@
+// MongoDB Connection
+
 import mongoose from "mongoose";
 import {MONGODB_URL} from '../config.js'
 
