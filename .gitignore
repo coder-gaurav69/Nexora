@@ -10,8 +10,8 @@ backend/package-lock.json
 # === Frontend (React/Vite) ===
 /frontend/node_modules/
 frontend/.env
-frontend/.env.local
-frontend/.env.*.local
+# frontend/.env.local
+# frontend/.env.*.local
 /frontend/build
 /frontend/dist
 /frontend/.next
