@@ -57,9 +57,9 @@ const Contact = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(formData);
-  }, [formData]);
+  useEffect(()=>{
+    window.scrollTo({top:0,left:0})
+  },[])
 
   return (
     <>

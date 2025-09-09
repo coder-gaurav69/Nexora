@@ -50,7 +50,8 @@ const Cart = () => {
         withCredentials: true,
       } as any);
       console.log(response?.data)
-      Success('Cart updated successfully.')
+      // Success('Cart updated successfully.')
+      Success((response?.data as any).message)
     } catch (error) {
       console.error("Delete failed:", error);
       Failure('Cart update failed. Check your connection and retry.')
@@ -99,6 +100,11 @@ const Cart = () => {
     }
   }, [isLoggedIn, customerId]);
 
+
+  useEffect(()=>{
+    window.scrollTo({top:0,left:0})
+  },[])
+
   return (
     <>
       <Navbar />
@@ -127,7 +133,7 @@ const Cart = () => {
               </p>
               <button
                 className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-md text-sm font-medium transition"
-                onClick={() => navigate("/products")} // Change route if needed
+                onClick={() => navigate("/")} // Change route if needed
               >
                 Continue Shopping
               </button>

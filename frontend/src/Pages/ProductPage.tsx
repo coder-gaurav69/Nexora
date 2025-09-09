@@ -127,12 +127,14 @@ const ProductPage = () => {
       const res = await axios.post(url, payload, { withCredentials: true });
       console.log(res?.data);
       {
-        val && Success("Item added to your cart successfully!");
+        // val && Success("Item added to your cart successfully!");
+        val && Success((res?.data as any).message);
       }
     } catch (error) {
       console.log(error);
       {
-        val && Failure("Failed to add the product. Please try again.");
+        // val && Failure("Failed to add the product. Please try again.");
+        Failure("Failed to add the product. Please try again.");
       }
     }
   };

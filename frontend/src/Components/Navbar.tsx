@@ -16,7 +16,8 @@ const Navbar = () => {
     isLoggedIn,
     setIsLoggedIn,
     customerId,
-    setCartDetails
+    setCartDetails,
+    setCustomerId
   } = useContext(GlobalContext);
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -30,6 +31,7 @@ const Navbar = () => {
         { customerId:customerId },
         { withCredentials: true }
       );
+      setCustomerId(undefined);
       setIsLoggedIn(false);
       setIsDropdownOpen(false);
       setIsMenuClicked(false);

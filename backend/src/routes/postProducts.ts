@@ -170,20 +170,14 @@ postRoute.post(
       imageLink,
       category,
     } = req.body;
-    // console.log(customerId, productId, productName, quantity, price, imageLink,category);
-    //  1. Validate required fields
+
+    //  1. Validating user
     if (
-      !customerId ||
-      !productId ||
-      !productName ||
-      !quantity ||
-      !price ||
-      !imageLink ||
-      !category
+      !customerId
     ) {
       return res.status(400).json({
         message:
-          "Missing required fields: customerId, productId, productName, quantity, price, imageLink",
+          "Login First",
         success: false,
       });
     }

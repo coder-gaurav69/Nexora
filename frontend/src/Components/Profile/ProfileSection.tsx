@@ -1,6 +1,18 @@
 import { useEffect, useState } from "react";
 import { FaEdit } from "react-icons/fa";
 import { useOutletContext } from "react-router-dom";
+import axios from "axios";
+
+// ✅ Define the context type
+type OutletContextType = {
+  setImage: React.Dispatch<React.SetStateAction<string | null>>;
+  info: {
+    name: string;
+    email: string;
+    phoneNumber: string;
+    profilePhoto: string;
+  } | null;
+};
 
 const ProfileSection = () => {
   const [profile, setProfile] = useState({
@@ -11,42 +23,76 @@ const ProfileSection = () => {
     photo: "",
   });
 
-const setImage = useOutletContext<React.Dispatch<React.SetStateAction<string | null>>>();
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
 
+  const { setImage, info } = useOutletContext<OutletContextType>();
 
-  // Load from localStorage on mount
+  // Load from parent context (info)
   useEffect(() => {
-    const savedProfile = localStorage.getItem("user-profile");
-    if (savedProfile) {
-      setProfile(JSON.parse(savedProfile));
-    } else {
+    if (info) {
       setProfile({
-        firstName: "John",
-        lastName: "Doe",
-        email: "john.doe@example.com",
-        phone: "+91 (555) 123-4567",
-        photo: "",
+        firstName: info.name?.split(" ")[0] || "",
+        lastName: info.name?.split(" ")[1] || "",
+        email: info.email || "",
+        phone: info.phoneNumber || "",
+        photo: info.profilePhoto || "",
       });
-      
     }
-  }, []);
+  }, [info]);
 
-  // Image preview handler
+  // Handle photo preview + state update
   const handlePhotoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setProfile({ ...profile, photo: reader.result as string });
-        setImage(reader.result as string);
+        setProfile((prev) => ({ ...prev, photo: reader.result as string }));
+        setImage(reader.result as string); // update global context
       };
       reader.readAsDataURL(file);
     }
   };
 
-  const handleSave = () => {
-    localStorage.setItem("user-profile", JSON.stringify(profile));
-    alert("✅ Profile updated!");
+  // ✅ Save profile API call
+  const handleSave = async () => {
+    try {
+      setLoading(true);
+      setMessage("");
+
+      // Prepare payload
+      const payload = {
+        name: `${profile.firstName} ${profile.lastName}`,
+        email: profile.email,
+        phoneNumber: profile.phone,
+        profilePhoto: profile.photo, // base64 string
+      };
+
+      // Replace with your API endpoint
+      const url = `${import.meta.env.VITE_BACKEND_URL}/api/v1/user/update-profile`;
+      const res = await fetch("/api/v1/user/update-profile", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+        credentials: "include", // if you’re using cookies/auth
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setMessage("Profile updated successfully ✅");
+        console.log("Updated profile:", data);
+      } else {
+        setMessage(data.message || "Failed to update profile ❌");
+      }
+    } catch (err) {
+      console.error(err);
+      setMessage("Something went wrong ❌");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -59,6 +105,7 @@ const setImage = useOutletContext<React.Dispatch<React.SetStateAction<string | n
       <div className="border-t pt-6">
         <h2 className="text-xl font-semibold mb-4">Personal Details</h2>
 
+        {/* Profile photo */}
         <div className="flex items-center gap-6 mb-6">
           <div className="w-24 h-24 bg-gray-200 rounded-full relative overflow-hidden">
             {profile.photo ? (
@@ -72,7 +119,10 @@ const setImage = useOutletContext<React.Dispatch<React.SetStateAction<string | n
                 No Photo
               </div>
             )}
-            <label htmlFor="photo" className="absolute bottom-0 right-0 bg-white p-1 rounded-full shadow cursor-pointer">
+            <label
+              htmlFor="photo"
+              className="absolute bottom-0 right-0 bg-white p-1 rounded-full shadow cursor-pointer"
+            >
               <FaEdit />
               <input
                 id="photo"
@@ -83,11 +133,15 @@ const setImage = useOutletContext<React.Dispatch<React.SetStateAction<string | n
               />
             </label>
           </div>
-          <button className="border px-4 py-2 rounded-md text-sm" onClick={() => document.getElementById("photo")?.click()}>
+          <button
+            className="border px-4 py-2 rounded-md text-sm"
+            onClick={() => document.getElementById("photo")?.click()}
+          >
             Change Photo
           </button>
         </div>
 
+        {/* Input fields */}
         <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium">First Name</label>
@@ -95,7 +149,7 @@ const setImage = useOutletContext<React.Dispatch<React.SetStateAction<string | n
               type="text"
               value={profile.firstName}
               onChange={(e) =>
-                setProfile({ ...profile, firstName: e.target.value })
+                setProfile((prev) => ({ ...prev, firstName: e.target.value }))
               }
               className="w-full border rounded-md px-4 py-2 mt-1"
             />
@@ -106,7 +160,7 @@ const setImage = useOutletContext<React.Dispatch<React.SetStateAction<string | n
               type="text"
               value={profile.lastName}
               onChange={(e) =>
-                setProfile({ ...profile, lastName: e.target.value })
+                setProfile((prev) => ({ ...prev, lastName: e.target.value }))
               }
               className="w-full border rounded-md px-4 py-2 mt-1"
             />
@@ -117,7 +171,7 @@ const setImage = useOutletContext<React.Dispatch<React.SetStateAction<string | n
               type="email"
               value={profile.email}
               onChange={(e) =>
-                setProfile({ ...profile, email: e.target.value })
+                setProfile((prev) => ({ ...prev, email: e.target.value }))
               }
               className="w-full border rounded-md px-4 py-2 mt-1"
             />
@@ -128,19 +182,26 @@ const setImage = useOutletContext<React.Dispatch<React.SetStateAction<string | n
               type="tel"
               value={profile.phone}
               onChange={(e) =>
-                setProfile({ ...profile, phone: e.target.value })
+                setProfile((prev) => ({ ...prev, phone: e.target.value }))
               }
               className="w-full border rounded-md px-4 py-2 mt-1"
             />
           </div>
         </form>
 
+        {/* Save button */}
         <button
           onClick={handleSave}
-          className="mt-6 bg-black text-white px-6 py-2 rounded-md"
+          disabled={loading}
+          className="mt-6 bg-black text-white px-6 py-2 rounded-md disabled:opacity-50"
         >
-          Save Changes
+          {loading ? "Saving..." : "Save Changes"}
         </button>
+
+        {/* Status message */}
+        {message && (
+          <p className="mt-4 text-sm text-center text-gray-600">{message}</p>
+        )}
       </div>
     </section>
   );

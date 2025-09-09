@@ -18,6 +18,10 @@ const UserSchema = new mongoose.Schema(
       type: String,
       //   required: true,
     },
+    phoneNumber: {
+      type: Number,
+      unique: true,
+    },
     
     shippingInfo: {
       firstName: { type: String },

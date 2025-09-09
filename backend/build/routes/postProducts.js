@@ -139,17 +139,10 @@ postRoute.post("/add-product", upload.any(), (req, res) => __awaiter(void 0, voi
 // route for adding products to carts
 postRoute.post("/add-cart-product", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { customerId, productId, productName, quantity, price, imageLink, category, } = req.body;
-    // console.log(customerId, productId, productName, quantity, price, imageLink,category);
-    //  1. Validate required fields
-    if (!customerId ||
-        !productId ||
-        !productName ||
-        !quantity ||
-        !price ||
-        !imageLink ||
-        !category) {
+    //  1. Validating user
+    if (!customerId) {
         return res.status(400).json({
-            message: "Missing required fields: customerId, productId, productName, quantity, price, imageLink",
+            message: "Login First",
             success: false,
         });
     }
