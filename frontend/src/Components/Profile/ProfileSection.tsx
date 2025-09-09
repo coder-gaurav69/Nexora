@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { FaEdit } from "react-icons/fa";
 import { useOutletContext } from "react-router-dom";
 import axios from "axios";
+import { Failure, Success } from "../Toast";
 
 // ✅ Define the context type
 type OutletContextType = {
@@ -19,7 +20,7 @@ const ProfileSection = () => {
     firstName: "",
     lastName: "",
     email: "",
-    phone: "",
+    phoneNumber: "",
     photo: "",
   });
 
@@ -35,7 +36,7 @@ const ProfileSection = () => {
         firstName: info.name?.split(" ")[0] || "",
         lastName: info.name?.split(" ")[1] || "",
         email: info.email || "",
-        phone: info.phoneNumber || "",
+        phoneNumber: info.phoneNumber || "",
         photo: info.profilePhoto || "",
       });
     }
@@ -64,32 +65,24 @@ const ProfileSection = () => {
       const payload = {
         name: `${profile.firstName} ${profile.lastName}`,
         email: profile.email,
-        phoneNumber: profile.phone,
+        phoneNumber: profile.phoneNumber,
         profilePhoto: profile.photo, // base64 string
       };
 
       // Replace with your API endpoint
-      const url = `${import.meta.env.VITE_BACKEND_URL}/api/v1/user/update-profile`;
-      const res = await fetch("/api/v1/user/update-profile", {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-        credentials: "include", // if you’re using cookies/auth
-      });
-
-      const data = await res.json();
-
-      if (res.ok) {
-        setMessage("Profile updated successfully ✅");
-        console.log("Updated profile:", data);
+      const url = `${import.meta.env.VITE_BACKEND_URL}/api/user/updateProfile/${(info as any)?._id}`;
+      const res = await axios.patch(url, payload, {withCredentials:true});
+      // console.log(res);
+      const data = res.data;
+      if ((data as any).success) {
+        Success("Profile updated successfully ✅");
+        // console.log("Updated profile:", data);
       } else {
-        setMessage(data.message || "Failed to update profile ❌");
+        Failure((data as any).message || "Failed to update profile ❌");
       }
     } catch (err) {
       console.error(err);
-      setMessage("Something went wrong ❌");
+      Failure("Something went wrong ❌");
     } finally {
       setLoading(false);
     }
@@ -180,9 +173,9 @@ const ProfileSection = () => {
             <label className="block text-sm font-medium">Phone</label>
             <input
               type="tel"
-              value={profile.phone}
+              value={profile.phoneNumber}
               onChange={(e) =>
-                setProfile((prev) => ({ ...prev, phone: e.target.value }))
+                setProfile((prev) => ({ ...prev, phoneNumber: e.target.value }))
               }
               className="w-full border rounded-md px-4 py-2 mt-1"
             />

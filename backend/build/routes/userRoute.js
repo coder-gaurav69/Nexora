@@ -1,45 +1,32 @@
-// import express, { Request, Response } from "express";
-// import userModel from "../mongoose/Schemas/userSchema.js";
-// const userRoute = express.Router();
-// const userDetails = async (req: Request, res: Response) => {
-//   try {
-//     const customerId = req.query.customerId as string | undefined;
-//     let users:string[];
-//     // If customerId is present
-//     if (customerId) {
-//       // Validate format
-//       if (!customerId.match(/^[0-9a-fA-F]{24}$/)) {
-//         return res.status(400).json({
-//           message: "Invalid customerId format",
-//           success: false,
-//         });
-//       }
-//       const user:string = await userModel.findById(customerId);
-//       if (!user) {
-//         return res.status(404).json({
-//           message: "Customer not found",
-//           success: false,
-//         });
-//       }
-//       users = [user]; // Return as array for consistent format
-//     } else {
-//       // No filter: return all users
-//       users = await userModel.find();
-//     }
-//     return res.status(200).json({
-//       message: customerId ? "User fetched successfully" : "All users fetched successfully",
-//       success: true,
-//       data: users,
-//     });
-//   } catch (error) {
-//     console.error("Error fetching user data:", error);
-//     return res.status(500).json({
-//       message: "Internal Server Error",
-//       success: false,
-//       error: error instanceof Error ? error.message : String(error),
-//     });
-//   }
-// };
-// // GET /api/userDetails 
-// userRoute.get("/userDetails", userDetails);
-// export default userRoute;
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+import express from "express";
+import userModel from "../mongoose/Schemas/userSchema.js";
+const userRoute = express.Router();
+userRoute.patch("/user/updateProfile/:id", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const { id } = req.params;
+        const updatedUser = yield userModel.findByIdAndUpdate(id, { $set: req.body }, { new: true, runValidators: true });
+        if (!updatedUser) {
+            res.status(404).json({ message: "User not found", success: false });
+            return;
+        }
+        res.json({
+            message: "User updated successfully",
+            success: true,
+            user: updatedUser,
+        });
+    }
+    catch (error) {
+        console.error(error.message || error);
+        res.status(500).json({ message: "Error updating user", error: error.message || error });
+    }
+}));
+export default userRoute;

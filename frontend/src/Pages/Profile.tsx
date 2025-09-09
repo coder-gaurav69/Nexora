@@ -18,7 +18,6 @@ export default function Profile() {
         console.log("customerId:", customerId);
         const url = `${import.meta.env.VITE_BACKEND_URL}/api/userDetails?customerId=${customerId}`;
         await axios.get(url, { withCredentials: true }).then((res) => {
-          console.log((res.data as any).data[0].profilePhoto);
           setImage((res.data as any).data[0].profilePhoto);
           setName((res.data as any).data[0].name);
           setInfo((res.data as any).data[0])

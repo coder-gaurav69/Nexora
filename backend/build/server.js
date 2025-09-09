@@ -10,6 +10,7 @@ import customAuth from './routes/customAuthRoutes.js';
 import cookieParser from 'cookie-parser';
 import { googleMiddleware, googleRoute } from './routes/googleAuthRoutes.js';
 import ordersRoute from './routes/ordersRoutes.js';
+import userRoute from './routes/userRoute.js';
 const app = express();
 app.use(cookieParser());
 app.use(express.json());
@@ -35,6 +36,8 @@ app.use('/api/razorpay', razorPayRoute);
 app.use('/api/customAuth', customAuth);
 // orderRoute
 app.use('/api', ordersRoute);
+// user
+app.use("/api", userRoute);
 // googleAuth route
 app.use(googleMiddleware);
 app.use('/auth/googleAuth', googleRoute);
